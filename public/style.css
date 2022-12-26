@@ -1,0 +1,24 @@
+/* light green - #606C38
+dark green - #283618
+beige - #FEFAE0
+light orange - #DDA15E
+dark orange - #BC6C25 */
+
+
+body{
+    margin: 0 0;
+    padding: 0 0;
+    background-color: #FEFAE0;
+    margin: 0 0;
+}
+header{
+    display: flex;
+    box-sizing: border-box;
+    font-family: 'Bitter', serif;
+    font-style: italic;
+    font-size: 2.2rem;
+    color: #FEFAE0;
+    background: #606C38;
+    align-items: center;
+    justify-content: center;
+}

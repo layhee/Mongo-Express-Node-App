@@ -47,12 +47,13 @@ app.use(express.json());// returns middleware that only parses JSON - may or may
 app.use(methodOverride('_method'));// allow POST, PUT and DELETE from a form
 
 
-//___________________
+
 // Routes
-//___________________
-//localhost:3000
+const rigsController = require('./controllers/rigs.js')
+app.use('/rigs', rigsController)
+
 app.get('/' , (req, res) => {
-  res.send('Hello World!');
+  res.render('index.ejs');
 });
 
 //___________________
