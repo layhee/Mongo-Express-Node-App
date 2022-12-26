@@ -8,8 +8,13 @@
     <%- include('../partials/header.ejs')%>
     <!---------header/nav--------->
     <main>
-        Add a new rig below:
-        
+        Add a new rig below:<br>
+        <form action="/rigs" method="POST">
+			Rig Name: <input type="text" name="name" /><br />
+			Frame: <input type="text" name="frame" /><br />
+            Wheels: <input type="text" name="wheels" /><br />			
+			<input type="submit" name="" value="Add Rig" />
+		</form>
     </main>
 </body>
 </html>
