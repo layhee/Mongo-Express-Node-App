@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<!---------head--------->
+<%- include('../partials/head.ejs')%>
+<!---------head--------->
+<body>
+    <!---------header/nav--------->
+    <%- include('../partials/header.ejs')%>
+    <!---------header/nav--------->
+    <main>
+        <h1>Edit <%= rig.name%></h1>
+        <section>
+            <h2>Rig Details:</h2>
+            <form action="/rigs/<%=rig._id%>?_method=PUT" method="POST">
+                <input type="text" name="name" value="<%=rig.name%>"><br>
+                <input type="text" name="frame" value="<%=rig.frame%>"><br>
+                <input type="text" name="wheels" value="<%=rig.wheels%>"><br>
+                <input type="submit" value="Update Rig">  
+            </form>
+        </section>
+    </main>
+</body>
+</html>

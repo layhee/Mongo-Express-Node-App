@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<!---------head--------->
+<%- include('../partials/head.ejs')%>
+<!---------head--------->
+<body>
+    <!---------header/nav--------->
+    <%- include('../partials/header.ejs')%>
+    <!---------header/nav--------->
+    <main>
+        <h1><%= rig.name%></h1>
+        <section>
+            <h2>Rig Details:</h2>
+            <ul>
+                <li>
+                    Frame: <%= rig.frame %>
+                </li>
+                <li>
+                    Wheels: <%= rig.wheels %>
+                </li>
+            </ul>
+            <form action="/rigs/<%=rig._id%>?_method=DELETE" method="POST">
+                <input type="submit" value="Delete Rig">
+            </form>
+            <a href="/rigs/<%= rig._id %>/edit">EDIT RIG</a>
+        </section>
+    </main>
+</body>
+</html>

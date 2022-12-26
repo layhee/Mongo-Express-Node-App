@@ -8,7 +8,15 @@
     <%- include('../partials/header.ejs')%>
     <!---------header/nav--------->
     <main>
-        rigs page
+        <h2>Rigs</h2>
+        <ul>
+            <%rigs.forEach(rigs => { %>
+            <li>
+            <a href="/rigs/<%=rigs._id%>"><%=rigs.name%></a>    
+            <% }) %>
+            </li>
+        </ul>
+
     </main>
 </body>
 </html>
