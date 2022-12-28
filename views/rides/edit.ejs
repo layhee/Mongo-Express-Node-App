@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<!---------head--------->
+<%- include('../partials/head.ejs')%>
+<!---------head--------->
+<body>
+    <!---------header/nav--------->
+    <%- include('../partials/header.ejs')%>
+    <!---------header/nav--------->
+    <main>
+        <h1>Edit <%=rides.name%></h1>
+        <section>
+            <h2>Ride Details:</h2>
+            <form action="/rides/<%=rides._id%>?_method=PUT" method="POST">
+                Name: <input type="text" name="name" value="<%=rides.name%>"><br>
+                Start: <input type="text" name="start" value="<%=rides.start%>"><br>
+                End: <input type="text" name="end" value="<%=rides.end%>"><br>
+                Distance: <input type="text" name="distance" value="<%=rides.distance%>"><br>
+                Terrain: <input type="text" name="terrain" value="<%=rides.terrain%>"><br>
+                <input type="submit" value="Update Ride">  
+            </form>
+        </section>
+    </main>
+</body>
+</html>

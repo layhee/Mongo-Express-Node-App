@@ -14,11 +14,28 @@ body{
 header{
     display: flex;
     box-sizing: border-box;
-    font-family: 'Bitter', serif;
-    font-style: italic;
-    font-size: 2.2rem;
+    font-family: 'Chivo Mono', serif;
+    font-size: 1.6rem;
     color: #FEFAE0;
-    background: #606C38;
+    background: #283618;
     align-items: center;
     justify-content: center;
+}
+h1{
+    font-size: 2.6rem;
+    font-family: 'Bitter', serif;
+    color: #DDA15E;
+    font-weight: 800;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+.rig-details{
+    background-color: #86974e;
+    margin: 2px 0;
+    padding: 2px 2px;
+    color: #FEFAE0;
 }

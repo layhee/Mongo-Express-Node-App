@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<!---------head--------->
+<%- include('../partials/head.ejs')%>
+<!---------head--------->
+<body>
+    <!---------header/nav--------->
+    <%- include('../partials/header.ejs')%>
+    <!---------header/nav--------->
+    <main>
+        Add a new ride below:<br>
+        <form action="/rides" method="POST">
+			Route Name: <input type="text" name="name" /><br>
+			Start: <input type="text" name="start" /><br>
+            End: <input type="text" name="end" /><br>
+            Distance: <input type="text" name="distance" /><br>
+            Terrain: <input type="text" name="terrain" /><br>		
+			<input type="submit" name="" value="Add Ride">
+		</form>
+    </main>
+</body>
+</html>

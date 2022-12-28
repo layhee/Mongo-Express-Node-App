@@ -12,8 +12,29 @@
         <form action="/rigs" method="POST">
 			Rig Name: <input type="text" name="name" /><br />
 			Frame: <input type="text" name="frame" /><br />
-            Wheels: <input type="text" name="wheels" /><br />			
-			<input type="submit" name="" value="Add Rig" />
+            Fork: <input type="text" name="fork" /><br />
+            Rims: <input type="text" name="rims" /><br />
+            Hubs: <input type="text" name="hubs" /><br />
+            Tires: <input type="text" name="tires" /><br />
+            Handlebars: <input type="text" name="handlebars" /><br />
+            Headset: <input type="text" name="headset" /><br />
+            Crankset: <input type="text" name="crankset" /><br />
+            Pedals: <input type="text" name="pedals" /><br />
+            Cassette: <input type="text" name="cassette" /><br />
+			Derailleur: <input type="text" name="derailleur" /><br />
+            Brakes: <input type="text" name="brakes" /><br />
+            Shifters: <input type="text" name="shifters" /><br />
+            Saddle: <input type="text" name="saddle" /><br />
+            Seatpost: <input type="text" name="seatpost" /><br />
+            Stem: <input type="text" name="stem" /><br />
+            Front Bag: <input type="text" name="frontbag" /><br />
+            Frame Bag: <input type="text" name="framebag" /><br />
+            Rear Bag: <input type="text" name="rearbag" /><br />			
+			<input type="submit" name="" value="Add Rig" /><br>
+            Upload Photo:<br>
+            <form action="/rigs" method="post" enctype="multipart/form-data">
+                <input type="file" name="img">
+            </form>
 		</form>
     </main>
 </body>

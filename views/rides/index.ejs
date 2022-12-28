@@ -8,13 +8,14 @@
     <%- include('../partials/header.ejs')%>
     <!---------header/nav--------->
     <main>
-        <h2>Rigs</h2>
-        <a href="./new">Create a Rig</a>
+        <h2>Rides</h2>
+        <a href="rides/new">Create a Ride</a>
         <ul>
-            <%rigs.forEach(rigs => { %>
-            <li>
-            <a href="/rigs/<%=rigs._id%>"><%=rigs.name%></a>    
-            <% }) %>
+            <%rides.forEach(rides => { %>
+                <li>
+                <a href="/rides/<%=rides._id%>"><%=rides.name%></a>    
+                <% }) %>
+                </li>
             </li>
         </ul>
 

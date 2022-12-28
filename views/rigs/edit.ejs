@@ -12,9 +12,25 @@
         <section>
             <h2>Rig Details:</h2>
             <form action="/rigs/<%=rig._id%>?_method=PUT" method="POST">
-                <input type="text" name="name" value="<%=rig.name%>"><br>
-                <input type="text" name="frame" value="<%=rig.frame%>"><br>
-                <input type="text" name="wheels" value="<%=rig.wheels%>"><br>
+                Frame: <input type="text" name="frame" value="<%=rig.frame%>"><br>
+                Fork: <input type="text" name="fork" value="<%=rig.fork%>"><br>
+                Rims: <input type="text" name="rims" value="<%=rig.rims%>"><br>
+                Hubs: <input type="text" name="hubs" value="<%=rig.hubs%>"><br>
+                Tires: <input type="text" name="tires" value="<%=rig.tires%>"><br>
+                Handlebars: <input type="text" name="handlebars" value="<%=rig.handlebars%>"><br>
+                Headset: <input type="text" name="headset" value="<%=rig.headset%>"><br>
+                Crankset: <input type="text" name="crankset" value="<%=rig.crankset%>"><br>
+                Pedals: <input type="text" name="pedals" value="<%=rig.pedals%>"><br>
+                Cassette: <input type="text" name="cassette" value="<%=rig.cassette%>"><br>
+                Derailleur: <input type="text" name="derailleur" value="<%=rig.derailleur%>"><br>
+                Brakes: <input type="text" name="brakes" value="<%=rig.brakes%>"><br>
+                Shifters: <input type="text" name="shifters" value="<%=rig.shifters%>"><br>
+                Saddle: <input type="text" name="saddle" value="<%=rig.saddle%>"><br>
+                Seatpost: <input type="text" name="seatpost" value="<%=rig.seatpost%>"><br>
+                Stem: <input type="text" name="stem" value="<%=rig.stem%>"><br>
+                Front Bag: <input type="text" name="frontbag" value="<%=rig.frontbag%>"><br>
+                Frame Bag: <input type="text" name="framebag" value="<%=rig.framebag%>"><br>
+                Rear Bag: <input type="text" name="rearbag" value="<%=rig.rearbag%>"><br>
                 <input type="submit" value="Update Rig">  
             </form>
         </section>

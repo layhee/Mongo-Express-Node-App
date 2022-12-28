@@ -1,6 +1,6 @@
 const express = require('express')
 const router = express.Router()
-const Rig = require('../models/rigs')
+const Rig = require('../models/rigs.js')
 
 // INDEX
 router.get('/', (req,res) => {

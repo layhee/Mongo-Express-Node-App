@@ -12,12 +12,27 @@
         <section>
             <h2>Rig Details:</h2>
             <ul>
-                <li>
-                    Frame: <%= rig.frame %>
-                </li>
-                <li>
-                    Wheels: <%= rig.wheels %>
-                </li>
+                <li class="rig-details">Frame: <%= rig.frame %></li>
+                 <li class="rig-details">Fork: <%= rig.fork %></li>
+                 <li class="rig-details">Rims: <%= rig.rims %></li>
+                 <li class="rig-details">Hubs: <%= rig.hubs %></li>
+                 <li class="rig-details">Tires: <%= rig.tires %></li>
+                 <li class="rig-details">Handlebars: <%= rig.handlebars %></li>
+                 <li class="rig-details">Headset: <%= rig.headset %></li>
+                 <li class="rig-details">Crankset: <%= rig.crankset %></li>
+                 <li class="rig-details">Pedals: <%= rig.pedals %></li>
+                 <li class="rig-details">Cassette: <%= rig.cassette %></li>
+                 <li class="rig-details">Derailleur: <%= rig.derailleur %></li>
+                 <li class="rig-details">Brakes: <%= rig.brakes %></li>
+                 <li class="rig-details">Shifters: <%= rig.shifters %></li>
+                 <li class="rig-details">Saddle: <%= rig.saddle %></li>
+                 <li class="rig-details">Seatpost: <%= rig.seatpost %></li>
+                 <li class="rig-details">Stem: <%= rig.stem %></li>
+                 <li class="rig-details">Front Bag: <%= rig.frontbag %></li>
+                 <li class="rig-details">Frame Bag: <%= rig.framebag %></li>
+                 <li class="rig-details">Rear Bag: <%= rig.rearbag %></li>
+                <img src="<%= rig.img %>">
+                
             </ul>
             <form action="/rigs/<%=rig._id%>?_method=DELETE" method="POST">
                 <input type="submit" value="Delete Rig">

@@ -7,18 +7,20 @@ const mongoose = require('mongoose');
 const app = express();
 const db = mongoose.connection;
 const rigData = require('./rig-data')
+const rideData = require('./ride-data')
+const ridesController = require('./controllers/rides.js')
+const rigsController = require('./controllers/rigs.js')
+const Rig = require('./models/rigs.js')
+const Ride = require('./models/rides.js')
 
 //Port
 // Allow use of Heroku's port or your own local port, depending on the environment
 const PORT = process.env.PORT || 3000;
 
 //Database
-// How to connect to the database either via heroku or locally
 const MONGODB_URI = process.env.MONGODB_URI;
 
 // Connect to Mongo &
-// Fix Depreciation Warnings from Mongoose
-// May or may not need these depending on your Mongoose version
 mongoose.connect(MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
 
 // Error / success
@@ -29,6 +31,8 @@ db.on('disconnected', () => console.log('mongod disconnected'));
 //Middleware
 app.use(methodOverride('_method'));
 app.use(express.static('public'));
+app.use('/rides', ridesController)
+app.use('/rigs', rigsController)
 
 // populates req.body with parsed info from forms - if no data from forms will return an empty object {}
 app.use(express.urlencoded({ extended: true }));// extended: false - does not allow nested objects in query strings
@@ -42,9 +46,11 @@ app.get('/rigs/seed', (req,res) => {
   })
 })
 
-const rigsController = require('./controllers/rigs.js');
-const Rig = require('./models/rigs.js');
-app.use('/rigs', rigsController)
+app.get('/rides/seed', (req,res) => {
+  Ride.create(rideData, (err) => {
+    res.redirect('/rides')
+  })
+})
 
 app.get('/' , (req, res) => {
   res.render('index.ejs');
@@ -52,4 +58,3 @@ app.get('/' , (req, res) => {
 
 //Listener
 app.listen(PORT, () => console.log('express is listening on:', PORT));
-
