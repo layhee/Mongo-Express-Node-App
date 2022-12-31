@@ -7,9 +7,13 @@
     <!---------header/nav--------->
     <%- include('../partials/header.ejs')%>
     <!---------header/nav--------->
-    <main>
+    <main class="container">
+        <div class="row">
         <h1><%= rig.name%></h1>
-        <section>
+        <section class="col-6 fluid">
+            <img class="img-fluid" src="<%= rig.img %>">
+        </section>
+        <section class="col-6">
             <h2>Rig Details:</h2>
             <ul>
                 <li class="rig-details">Frame: <%= rig.frame %></li>
@@ -30,15 +34,14 @@
                  <li class="rig-details">Stem: <%= rig.stem %></li>
                  <li class="rig-details">Front Bag: <%= rig.frontbag %></li>
                  <li class="rig-details">Frame Bag: <%= rig.framebag %></li>
-                 <li class="rig-details">Rear Bag: <%= rig.rearbag %></li>
-                <img src="<%= rig.img %>">
-                
+                 <li class="rig-details">Rear Bag: <%= rig.rearbag %></li>                
             </ul>
             <form action="/rigs/<%=rig._id%>?_method=DELETE" method="POST">
                 <input type="submit" value="Delete Rig">
             </form>
             <a href="/rigs/<%= rig._id %>/edit">EDIT RIG</a>
         </section>
+    </div>
     </main>
 </body>
 </html>

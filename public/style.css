@@ -3,13 +3,18 @@ dark green - #283618
 beige - #FEFAE0
 light orange - #DDA15E
 dark orange - #BC6C25 */
-
-
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+ }
+ 
 body{
     margin: 0 0;
     padding: 0 0;
     background-color: #FEFAE0;
     margin: 0 0;
+    height: 100vh;
 }
 header{
     display: flex;
@@ -24,8 +29,12 @@ header{
 h1{
     font-size: 2.6rem;
     font-family: 'Bitter', serif;
-    color: #DDA15E;
+    color: rgb(255, 180, 4);
     font-weight: 800;
+    margin: 24px 0;
+}
+h2{
+    font-family: 'Chivo Mono', serif;
 }
 a{
     text-decoration: none;
@@ -33,9 +42,77 @@ a{
 li{
     list-style: none;
 }
+.wrap{
+    /* background: linear-gradient(45deg, #ef9a11, #eb4817, #f014d7, #1ddbec, #3ed0fc); */
+	background-size: 400% 400%;
+	animation: gradient 18s ease infinite;
+	height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+main{
+    /* flex: 1; */
+}
+footer{
+    display: flex;
+    flex-direction: column-reverse;
+    width: 100vw;
+    bottom 0;
+}
+.mtn{
+    display: flex;
+    width: 100%;
+    height: 30vw;
+    position: fixed;
+    bottom: 0;
+    background-image: url(https://dev.lehi.work/mt3.svg);
+    background-repeat: repeat-x;
+    background-size: 200%;
+    animation: scroll-anim 40s linear infinite;
+    align-items: center;
+    justify-content: center;
+}
+.mtn::before{
+    content: "";
+    width: 100%;
+    height: 30vw;
+    position: fixed;
+    bottom: 0;
+    background: url(https://dev.lehi.work/mt2.svg) repeat-x;
+    background-size: 200%;
+    animation: scroll-anim 15s linear infinite;
+}
+.mtn::after{
+    content: "";
+    width: 100%;
+    height: 30vw;
+    position: fixed;
+    bottom: 0;
+    background: url(https://dev.lehi.work/mt1.svg) repeat-x;
+    background-size: 200%;
+    animation: scroll-anim 8s linear infinite;
+}
+@keyframes scroll-anim {
+    100% {
+        background-position: 100% 0;
+    }
+}
+
 .rig-details{
     background-color: #86974e;
     margin: 2px 0;
     padding: 2px 2px;
-    color: #FEFAE0;
+    color: #fff;
+    font-family: 'Fragment Mono', sans-serif;
 }

@@ -1,9 +1,8 @@
-require('dotenv').config()
-
 //Dependencies
 const express = require('express');
 const methodOverride = require('method-override');
 const mongoose = require('mongoose');
+require('dotenv').config()
 const app = express();
 const db = mongoose.connection;
 const rigData = require('./rig-data')
