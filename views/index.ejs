@@ -5,16 +5,20 @@
 <!---------head--------->
 <body>
     <div class="wrap">
-    <!---------header/nav--------->
-    <%- include('./partials/header.ejs') %>
-    <!---------header/nav--------->
     <main class="d-flex justify-content-center">
-        <button class="btn btn-warning btn-lg mx-2">Login</button>
-        <button class="btn btn-warning btn-lg mx-2">Register</button>
+        <!-- <h2>Hello Friend!</h2> -->
+        <h1 class="welcome">Bikepacking <br>Rigs + Routes</h1>
+        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+        <lottie-player src="https://assets2.lottiefiles.com/packages/lf20_8U9oxZ99YL.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop  autoplay></lottie-player>
+        <div class="nav">
+            <button class="btn btn-warning btn-lg mx-2">Login</button>
+            <button class="btn btn-warning btn-lg mx-2">Register</button><br>
+        </div><br>
+            <a href="/rigs"><button class="btn btn-success btn-sm px-5" action="">View Rigs</button></a><br>
+            <a href="/rides"><button class="btn btn-success btn-sm px-5">View Rides</button></a>
     </main>
     <footer>
         <div class="mtn">
-
         </div>
     </footer>
     </div>
