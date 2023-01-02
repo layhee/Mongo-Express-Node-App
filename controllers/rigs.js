@@ -10,6 +10,7 @@ router.get('/', (req,res) => {
         })
     })
 })
+
 // NEW
 router.get('/new', (req,res) => {
     res.render('rigs/new.ejs')
@@ -32,11 +33,7 @@ router.put('/:id', (req,res) => {
 // CREATE 
 router.post('/', (req,res) => {
     Rig.create(req.body, (error, createdRig) => {
-        if (error) {
-            res.send(error)
-        } 
-        res.send(createdRig)
-        // res.redirect('/rigs')
+        res.send('/rigs')
     })
 })
 

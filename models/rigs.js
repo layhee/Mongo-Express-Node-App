@@ -22,11 +22,7 @@ const rigSchema = new Schema({
     frontbag: String,
     framebag: String,
     rearbag: String,
-    img:
-    {
-        data: Buffer,
-        contentType: String
-    }
+    img: String,
 }, {
     timestamps: true
 })
