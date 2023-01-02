@@ -9,14 +9,18 @@
     <!---------header/nav--------->
     <main>
         <h2>Rigs</h2>
-        <a href="rigs/new">Create a Rig</a>
-        <ul>
+        <dd class="col-11 d-flex flex-row">
             <%rigs.forEach(rigs => { %>
-            <li>
-            <a href="/rigs/<%=rigs._id%>"><%=rigs.name%></a>    
+            <li class="mx-3 card">
+            <a href="/rigs/<%=rigs._id%>">
+                <img class="card-img-top" src="<%=rigs.img%>">
+                <h5 class="card-title rig-title text-center"><%=rigs.name%></a></h5>
+                <p class="card-text p-2"><%=rigs.frame%> on some <%=rigs.tires%> and <%=rigs.derailleur%></p>    
             <% }) %>
             </li>
-        </ul>
+        </dd><br>
+        <a href="rigs/new"><button class="btn btn-warning">Create a Rig</button></a><br>
     </main>
+    <%- include('../partials/footer.ejs')%>
 </body>
 </html>

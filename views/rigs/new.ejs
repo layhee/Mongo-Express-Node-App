@@ -8,34 +8,42 @@
     <%- include('../partials/header.ejs')%>
     <!---------header/nav--------->
     <main>
-        Add a new rig below:<br>
-        <form action="/rigs" method="POST">
-			Rig Name: <input type="text" name="name" /><br />
-			Frame: <input type="text" name="frame" /><br />
-            Fork: <input type="text" name="fork" /><br />
-            Rims: <input type="text" name="rims" /><br />
-            Hubs: <input type="text" name="hubs" /><br />
-            Tires: <input type="text" name="tires" /><br />
-            Handlebars: <input type="text" name="handlebars" /><br />
-            Headset: <input type="text" name="headset" /><br />
-            Crankset: <input type="text" name="crankset" /><br />
-            Pedals: <input type="text" name="pedals" /><br />
-            Cassette: <input type="text" name="cassette" /><br />
-			Derailleur: <input type="text" name="derailleur" /><br />
-            Brakes: <input type="text" name="brakes" /><br />
-            Shifters: <input type="text" name="shifters" /><br />
-            Saddle: <input type="text" name="saddle" /><br />
-            Seatpost: <input type="text" name="seatpost" /><br />
-            Stem: <input type="text" name="stem" /><br />
-            Front Bag: <input type="text" name="frontbag" /><br />
-            Frame Bag: <input type="text" name="framebag" /><br />
-            Rear Bag: <input type="text" name="rearbag" /><br />			
-			<input type="submit" name="" value="Add Rig" /><br>
-            Upload Photo:<br>
-            <form action="/rigs" method="post" enctype="multipart/form-data">
-                <input type="file" name="img">
-            </form>
+        <h2>Add a new rig below:</h2>
+        <div class="rig-details d-flex flex-row col col-9 shadow justify-content-center">
+        <form action="/rigs" method="POST" class="d-flex flex-row flex-wrap">
+			<div class="col col-6 px-2 py-2">
+                <input type="text" id="typeText" class="form-control my-2" name="name" placeholder="Rig Name">
+                <input type="text" id="typeText" class="form-control my-2" name="frame" placeholder="Frame">
+                <input type="text" id="typeText" class="form-control my-2" name="fork" placeholder="Fork">
+                <input type="text" id="typeText" class="form-control my-2" name="rims" placeholder="Rims">
+                <input type="text" id="typeText" class="form-control my-2" name="hubs" placeholder="Hubs">
+                <input type="text" id="typeText" class="form-control my-2" name="tires" placeholder="Tires">
+                <input type="text" id="typeText" class="form-control my-2" name="handlebars" placeholder="Handlebars">
+                <input type="text" id="typeText" class="form-control my-2" name="headset" placeholder="Handlebars">
+                <input type="text" id="typeText" class="form-control my-2" name="crankset" placeholder="Crankset">
+                <input type="text" id="typeText" class="form-control my-2" name="pedals" placeholder="Pedals">
+            </div>
+            <div class="col col-6 px-2 py-2">  
+                <input type="text" id="typeText" class="form-control my-2" name="cassette" placeholder="Cassette">
+                <input type="text" id="typeText" class="form-control my-2" name="derailleur" placeholder="Derailleur">
+                <input type="text" id="typeText" class="form-control my-2" name="brakes" placeholder="Brakes">
+                <input type="text" id="typeText" class="form-control my-2" name="shifters" placeholder="Shifters">
+                <input type="text" id="typeText" class="form-control my-2" name="saddle" placeholder="Saddle">
+                <input type="text" id="typeText" class="form-control my-2" name="seatpost" placeholder="Seatpost">
+                <input type="text" id="typeText" class="form-control my-2" name="stem" placeholder="Stem">
+                <input type="text" id="typeText" class="form-control my-2" name="frontbag" placeholder="Front Bag">
+                <input type="text" id="typeText" class="form-control my-2" name="framebag" placeholder="Frame Bag">
+                <input type="text" id="typeText" class="form-control my-2" name="rearbag" placeholder="Rear Bag">
+            </div>
+            <div class="col col-12 d-flex flex-row justify-content-evenly mx-4 my-4">
+                Upload Photo:
+                <form action="/rigs" method="post" enctype="multipart/form-data">
+                    <input type="file" name="img">
+                </form>
+                <input type="submit" name="" class="btn btn-warning btn-large shadow mx-2 px-5" value="Add Rig" /><br>
 		</form>
+    </div>
     </main>
+    <%- include('../partials/footer.ejs')%>
 </body>
 </html>
