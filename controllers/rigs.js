@@ -33,7 +33,7 @@ router.put('/:id', (req,res) => {
 // CREATE 
 router.post('/', (req,res) => {
     Rig.create(req.body, (error, createdRig) => {
-        res.send('/rigs')
+        res.redirect('/rigs')
     })
 })
 
