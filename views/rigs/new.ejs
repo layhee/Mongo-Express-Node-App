@@ -38,12 +38,17 @@
             <div class="col col-12 d-flex flex-row justify-content-evenly mx-4 my-4">
                 Upload Photo:
                 <form action="/rigs" method="post" enctype="multipart/form-data">
-                    <input type="file" name="img">
+                    <div class="input-group mb-3 upload">
+                        <input type="file" class="form-control" id="inputGroupFile02">
+                        <label class="input-group-text" for="inputGroupFile02">Upload</label>
+                      </div>
                 </form>
                 <input type="submit" name="" class="btn btn-warning btn-large shadow mx-2 px-5" value="Add Rig" /><br>
 		</form>
     </div>
     </main>
+    <!---------footer/animation---------> 
     <%- include('../partials/footer.ejs')%>
+    <!---------footer/animation---------> 
 </body>
 </html>

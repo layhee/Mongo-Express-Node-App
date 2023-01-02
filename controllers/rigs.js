@@ -32,6 +32,9 @@ router.put('/:id', (req,res) => {
 // CREATE 
 router.post('/', (req,res) => {
     Rig.create(req.body, (error, createdRig) => {
+        if (error) {
+            res.send(error)
+        }
         res.redirect('/rigs')
     })
 })
