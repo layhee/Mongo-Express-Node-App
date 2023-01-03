@@ -9,18 +9,27 @@
     <!---------header/nav--------->
     <main>
         <h1>Edit <%=rides.name%></h1>
-        <section>
-            <h2>Ride Details:</h2>
-            <form action="/rides/<%=rides._id%>?_method=PUT" method="POST">
-                Name: <input type="text" name="name" value="<%=rides.name%>"><br>
-                Start: <input type="text" name="start" value="<%=rides.start%>"><br>
-                End: <input type="text" name="end" value="<%=rides.end%>"><br>
-                Distance: <input type="text" name="distance" value="<%=rides.distance%>"><br>
-                Terrain: <input type="text" name="terrain" value="<%=rides.terrain%>"><br>
-                <input type="submit" value="Update Ride">  
+        <div class="rig-new d-flex flex-row col col-9 shadow justify-content-center">
+            <form action="/rides/<%=rides._id%>?_method=PUT" method="POST" class="d-flex flex-row flex-wrap col col-12">
+                <div class="col col-12 px-2 py-2">
+                    <input type="text" class="form-control my-2" name="name" placeholder="Ride Name" value="<%=rides.name%>">
+                    <input type="text" class="form-control my-2" name="start" placeholder="Start" value="<%=rides.start%>">
+                    <input type="text" class="form-control my-2" name="end" placeholder="End" value="<%=rides.end%>">
+                    <input type="number" class="form-control my-2" name="distance" placeholder="Distance (in KM, please)" value="<%=rides.distance%>">
+                    <input type="text" class="form-control my-2" name="terrain" placeholder="Type of Terrain" value="<%=rides.terrain%>">
+                    <input type="textarea" class="form-control my-2" name="desc" placeholder="Brief Description of What You'll See" value="<%=rides.desc%>">
+                </div>
+                <div class="col col-12 d-flex flex-row justify-content-evenly my-4">
+                    Upload Photos (up to 5):
+                    <form action="/rides" method="post" enctype="multipart/form-data">
+                        <div class="input-group mb-3 upload">
+                            <input type="file" name="images" class="form-control" id="inputGroupFile02" multiple>
+                            <label class="input-group-text" for="inputGroupFile02">Upload</label>
+                          </div>
+                    </form>
+                    <input type="submit" class="btn btn-warning btn-large shadow mx-2 px-5" value="Update Ride"><br>
             </form>
-        </section>
-    </main>
+            </div>
      <!---------footer/animation---------> 
      <%- include('../partials/footer.ejs')%>
      <!---------footer/animation---------> 

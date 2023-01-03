@@ -8,15 +8,29 @@
     <%- include('../partials/header.ejs')%>
     <!---------header/nav--------->
     <main>
-        Add a new ride below:<br>
-        <form action="/rides" method="POST">
-			Route Name: <input type="text" name="name" /><br>
-			Start: <input type="text" name="start" /><br>
-            End: <input type="text" name="end" /><br>
-            Distance: <input type="text" name="distance" /><br>
-            Terrain: <input type="text" name="terrain" /><br>		
-			<input type="submit" name="" value="Add Ride">
+        <h2>Add a new ride below:</h2>
+        <div class="rig-new d-flex flex-row col col-9 shadow justify-content-center">
+        <form action="/rides" method="POST" class="d-flex flex-row flex-wrap col col-12">
+			<div class="col col-12 px-2 py-2">
+                <input type="text" class="form-control my-2" name="name" placeholder="Ride Name">
+                <input type="text" class="form-control my-2" name="start" placeholder="Start">
+                <input type="text" class="form-control my-2" name="end" placeholder="End">
+                <input type="number" class="form-control my-2" name="distance" placeholder="Distance (in KM, please)">
+                <input type="text" class="form-control my-2" name="terrain" placeholder="Type of Terrain">
+                <input type="textarea" class="form-control my-2" name="desc" placeholder="Brief Description of What You'll See">
+
+            </div>
+            <div class="col col-12 d-flex flex-row justify-content-evenly my-4">
+                Upload Photo (up to 5):
+                <form action="/rigs" method="post" enctype="multipart/form-data">
+                    <div class="input-group mb-3 upload">
+                        <input type="file" name="images" class="form-control" id="inputGroupFile02" multiple>
+                        <label class="input-group-text" for="inputGroupFile02">Upload</label>
+                      </div>
+                </form>
+                <input type="submit" class="btn btn-warning btn-large shadow mx-2 px-5" value="Add Rig"><br>
 		</form>
+        </div>
     </main>
      <!---------footer/animation---------> 
      <%- include('../partials/footer.ejs')%>

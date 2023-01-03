@@ -7,6 +7,7 @@ const rideSchema = new Schema({
     end: String,
     distance: Number,
     terrain: String,
+    desc: String,
     img: String,
     }, {
         timestamps: true
