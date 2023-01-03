@@ -18,7 +18,7 @@ const config = {
   baseURL: 'http://localhost:3000',
   clientID: 'znaxbwaFjGGr44Q6HTTIjeVgXsTC8Ecu',
   issuerBaseURL: 'https://dev-pd4r04igrfdmtnlu.us.auth0.com',
-  secret: process.env.SECRET
+  secret: 'stillsinthesehills'
 };
 
 // auth router attaches /login, /logout, and /callback routes to the baseURL
