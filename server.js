@@ -2,9 +2,8 @@
 const express = require('express');
 const methodOverride = require('method-override');
 const mongoose = require('mongoose');
-// const session = require('express-session')
+const { auth } = require('express-openid-connect');
 require('dotenv').config()
-const bcrypt = require('bcrypt')
 const app = express();
 const db = mongoose.connection;
 const rigData = require('./rig-data')
@@ -13,6 +12,22 @@ const ridesController = require('./controllers/rides.js')
 const rigsController = require('./controllers/rigs.js')
 const Rig = require('./models/rigs.js')
 const Ride = require('./models/rides.js')
+const config = {
+  authRequired: false,
+  auth0Logout: true,
+  baseURL: 'http://localhost:3000',
+  clientID: 'znaxbwaFjGGr44Q6HTTIjeVgXsTC8Ecu',
+  issuerBaseURL: 'https://dev-pd4r04igrfdmtnlu.us.auth0.com',
+  secret: process.env.SECRET
+};
+
+// auth router attaches /login, /logout, and /callback routes to the baseURL
+app.use(auth(config));
+
+// req.isAuthenticated is provided from the auth router
+app.get('/', (req, res) => {
+  res.send(req.oidc.isAuthenticated() ? res.redirect('/rigs') : res.render('index.ejs'))
+});
 
 //Port
 // Allow use of Heroku's port or your own local port, depending on the environment
@@ -32,13 +47,6 @@ db.on('disconnected', () => console.log('mongod disconnected'));
 //Middleware
 app.use(methodOverride('_method'));
 app.use(express.static('public'));
-// app.use(
-//   session({
-//     secret: process.env.SECRET,
-//     resave: false,
-//     saveUninitialized: false,
-//   })
-// )
 
 
 // populates req.body with parsed info from forms - if no data from forms will return an empty object {}
@@ -51,42 +59,6 @@ app.use('/rigs', rigsController)
 app.get('/' , (req, res) => {
   res.render('index.ejs');
 });
-
-// // Authorization
-// app.get('/hashed', (req,res) => {
-//   const hashedString = bcrypt.hashSync('example', bcrypt.genSaltSync(10))
-//   const isSameString = bcrypt.compareSync('yourGuessHere', hashedString)
-//   res.send(isSameString)
-// })
-
-// app.get('/any', (req,res) => {
-//   req.session.anyProperty = 'anything you want it to be'
-//   res.send('sup')
-// })
-
-// app.get('/update', (req,res) => {
-//   req.session.anyProperty = 'something'
-//   res.send('dis da route for updating something')
-// })
-
-// app.get('/retrieve', (req,res) => {
-//   if (req.session.anyProperty === 'anything you want it to be') {
-//     res.send('coolio')
-//   } else {
-//     res.send('nope')
-//   }
-// })
-// app.get('/destroy', (req,res) => {
-//   req.session.destroy((error) => {
-//     if (error) {
-//       res.send(error)
-//     } else {
-//       res.send({
-//         success: true
-//       })
-//     }
-//   })
-// })
 
 // Login + Register Routes
 app.get('/login', (req,res) => {
@@ -112,5 +84,6 @@ app.get('/rides/seed', (req,res) => {
     res.redirect('/rides')
   })
 })
+
 //Listener
 app.listen(PORT, () => console.log('express is listening on:', PORT));
