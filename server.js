@@ -39,27 +39,14 @@ app.use(express.static('public'));
 //     saveUninitialized: false,
 //   })
 // )
-app.use('/rides', ridesController)
-app.use('/rigs', rigsController)
 
 
 // populates req.body with parsed info from forms - if no data from forms will return an empty object {}
-app.use(express.urlencoded({ extended: false }));// extended: false - does not allow nested objects in query strings
+app.use(express.urlencoded({ extended: true }));// extended: false - does not allow nested objects in query strings
 app.use(express.json());// returns middleware that only parses JSON - may or may not need it depending on your project
-
-
+app.use('/rides', ridesController)
+app.use('/rigs', rigsController)
 // Routes
-app.get('/rigs/seed', (req,res) => {
-  Rig.create(rigData, (err) => {
-    res.redirect('/rigs')
-  })
-})
-
-app.get('/rides/seed', (req,res) => {
-  Ride.create(rideData, (err) => {
-    res.redirect('/rides')
-  })
-})
 
 app.get('/' , (req, res) => {
   res.render('index.ejs');
@@ -114,5 +101,16 @@ app.post('/register', (req,res) => {
 
 })
 
+app.get('/rigs/seed', (req,res) => {
+  Rig.create(rigData, (err) => {
+    res.redirect('/rigs')
+  })
+})
+
+app.get('/rides/seed', (req,res) => {
+  Ride.create(rideData, (err) => {
+    res.redirect('/rides')
+  })
+})
 //Listener
 app.listen(PORT, () => console.log('express is listening on:', PORT));

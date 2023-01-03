@@ -8,10 +8,11 @@
     <%- include('../partials/header.ejs')%>
     <!---------header/nav--------->
     <main class="container">
-        <div class="row">
+        <div class="row col col-12">
         <section class="col-6 fluid">
-            <h1 class="my-0"><%= rig.name%></h1>
-            <img class="img-fluid shadow img-show" src="<%= rig.img %>">
+            <h1 class="my-0"><%=rig.name%></h1>
+            
+            <img class="img-fluid shadow img-show" src="<%=rig.img%>">
         </section>
         <section class="col-6 d-flex flex-wrap flex-column">
             <h2>Rig Details:</h2>
@@ -36,11 +37,11 @@
                  <li class="rig-details">Frame Bag: <span class="specs"><%= rig.framebag %></span></li>
                  <li class="rig-details">Rear Bag: <span class="specs"><%= rig.rearbag %></span> </li>                
             </dd>
-            <div class="d-grid gap-2 d-md-block"> 
-                <form class="flex-row" action="/rigs/<%=rig._id%>?_method=DELETE" method="POST">
-                    <input type="submit" class="btn btn-success" value="Delete Rig">
-                </form>
+            <div class="d-flex flex-row"> 
                 <a href="/rigs/<%= rig._id %>/edit"><button class="btn btn-warning px-4">Edit Rig</button></a>
+                <form class="flex-row mx-4" action="/rigs/<%=rig._id%>?_method=DELETE" method="POST">
+                    <input type="submit" class="btn btn-danger" value="Delete Rig">
+                </form>
             </div>
         </section>
     </div>

@@ -9,16 +9,21 @@
     <!---------header/nav--------->
     <main>
         <h2>Rides</h2>
-        <a href="rides/new">Create a Ride</a>
-        <ul>
+        <dd class="col-11 d-flex flex-row">
             <%rides.forEach(rides => { %>
-                <li>
-                <a href="/rides/<%=rides._id%>"><%=rides.name%></a>    
-                <% }) %>
-                </li>
+            <li class="mx-3 card shadow d-flex align-items-center">
+            <a href="/rides/<%=rides._id%>">
+                <img class="card-img-top" src="<%=rides.img%>">
+                <div class="d-flex flex-column align-items-center">
+                    <h5 class="card-title rig-title text-center"><%=rides.name%></a></h5>
+                    <p class="card-text p-2 "><%=rides.distance%> miles on some <%=rides.terrain%> starting from <%=rides.start%></p>    
+                </div>
             </li>
-        </ul>
-
+            <% }) %>
+        </dd>
     </main>
+     <!---------footer/animation---------> 
+     <%- include('../partials/footer.ejs')%>
+     <!---------footer/animation---------> 
 </body>
 </html>

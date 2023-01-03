@@ -13,30 +13,37 @@
         <section class="col-12 d-flex flex-wrap flex-column">
             <form action="/rigs/<%=rig._id%>?_method=PUT" method="POST" class="d-flex flex-row flex-wrap">
                 <div class="col col-6 px-2 py-2">
-                    <input type="text" id="typeText" class="form-control my-2" name="name" placeholder="<%=rig.name%>">
-                    <input type="text" id="typeText" class="form-control my-2" name="frame" placeholder="<%=rig.frame%>">
-                    <input type="text" id="typeText" class="form-control my-2" name="fork" placeholder="<%=rig.fork%>">
-                    <input type="text" id="typeText" class="form-control my-2" name="rims" placeholder="<%=rig.rims%>">
-                    <input type="text" id="typeText" class="form-control my-2" name="hubs" placeholder="<%=rig.hubs%>">
-                    <input type="text" id="typeText" class="form-control my-2" name="tires" placeholder="<%=rig.tires%>">
-                    <input type="text" id="typeText" class="form-control my-2" name="handlebars" placeholder="<%=rig.handlebars%>">
-                    <input type="text" id="typeText" class="form-control my-2" name="headset" placeholder="<%=rig.headset%>">
-                    <input type="text" id="typeText" class="form-control my-2" name="crankset" placeholder="<%=rig.crankset%>">
-                    <input type="text" id="typeText" class="form-control my-2" name="pedals" placeholder="<%=rig.pedals%>">
+                    <input type="text" class="form-control my-2" name="name" value="<%=rig.name%>" placeholder="Name">
+                    <input type="text" class="form-control my-2" name="frame" value="<%=rig.frame%>" placeholder="Frame">
+                    <input type="text" class="form-control my-2" name="fork" value="<%=rig.fork%>" placeholder="Fork">
+                    <input type="text" class="form-control my-2" name="rims" value="<%=rig.rims%>" placeholder="Rims">
+                    <input type="text" class="form-control my-2" name="hubs" value="<%=rig.hubs%>" placeholder="Hubs">
+                    <input type="text" class="form-control my-2" name="tires" value="<%=rig.tires%>" placeholder="Tires">
+                    <input type="text" class="form-control my-2" name="handlebars" value="<%=rig.handlebars%>" placeholder="Handlebars">
+                    <input type="text" class="form-control my-2" name="headset" value="<%=rig.headset%>" placeholder="Headset">
+                    <input type="text" class="form-control my-2" name="crankset" value="<%=rig.crankset%>" placeholder="Crankset">
+                    <input type="text" class="form-control my-2" name="pedals" value="<%=rig.pedals%>" placeholder="Pedals">
                 </div>
                 <div class="col col-6 px-2 py-2">
-                    <input type="text" id="typeText" class="form-control my-2" name="cassette" placeholder="<%=rig.cassette%>">
-                    <input type="text" id="typeText" class="form-control my-2" name="derailleur" placeholder="<%=rig.derailleur%>">
-                    <input type="text" id="typeText" class="form-control my-2" name="brakes" placeholder="<%=rig.brakes%>">
-                    <input type="text" id="typeText" class="form-control my-2" name="shifters" placeholder="<%=rig.shifters%>">
-                    <input type="text" id="typeText" class="form-control my-2" name="saddle" placeholder="<%=rig.saddle%>">
-                    <input type="text" id="typeText" class="form-control my-2" name="seatpost" placeholder="<%=rig.seatpost%>">
-                    <input type="text" id="typeText" class="form-control my-2" name="stem" placeholder="<%=rig.stem%>">
-                    <input type="text" id="typeText" class="form-control my-2" name="frontbag" placeholder="<%=rig.frontbag%>">
-                    <input type="text" id="typeText" class="form-control my-2" name="framebag" placeholder="<%=rig.framebag%>">
-                    <input type="text" id="typeText" class="form-control my-2" name="rearbag" placeholder="<%=rig.rearbag%>">
+                    <input type="text" class="form-control my-2" name="cassette" value="<%=rig.cassette%>" placeholder="Cassette">
+                    <input type="text" class="form-control my-2" name="derailleur" value="<%=rig.derailleur%>" placeholder="Derailleur">
+                    <input type="text" class="form-control my-2" name="brakes" value="<%=rig.brakes%>" placeholder="Brakes">
+                    <input type="text" class="form-control my-2" name="shifters" value="<%=rig.shifters%>" placeholder="Shifters">
+                    <input type="text" class="form-control my-2" name="saddle" value="<%=rig.saddle%>" placeholder="Saddle">
+                    <input type="text" class="form-control my-2" name="seatpost" value="<%=rig.seatpost%>" placeholder="Seatpost">
+                    <input type="text" class="form-control my-2" name="stem" value="<%=rig.stem%>" placeholder="Stem">
+                    <input type="text" class="form-control my-2" name="frontbag" value="<%=rig.frontbag%>" placeholder="Front Bag">
+                    <input type="text" class="form-control my-2" name="framebag" value="<%=rig.framebag%>" placeholder="Frame Bag">
+                    <input type="text" class="form-control my-2" name="rearbag" value="<%=rig.rearbag%>" placeholder="Rear Bag">
                 </div>
                 <div class="col d-flex flex-row justify-content-evenly mx-4 my-4">
+                    Upload Photo:
+                <form action="/rigs" method="post" enctype="multipart/form-data">
+                    <div class="input-group mb-3 upload">
+                        <input type="file" name="images" class="form-control" id="inputGroupFile02" multiple>
+                        <label class="input-group-text" for="inputGroupFile02">Upload</label>
+                      </div>
+                </form>
                     <input type="submit" value="Update Rig" class="btn btn-warning btn-large shadow mx-2 px-5">
                 </div>
                 </form>

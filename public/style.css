@@ -77,6 +77,8 @@ main{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    z-index: 200;
+    position: relative;
 }
 footer{
     display: flex;
@@ -169,4 +171,7 @@ footer{
 .container{
     z-index: 200;
     position: relative;
+}
+.card{
+    max-width: 360px;
 }

@@ -11,13 +11,15 @@
             <h2>Rigs</h2>
             <dd class="col-11 d-flex flex-row">
                 <%rigs.forEach(rigs => { %>
-                <li class="mx-3 card shadow">
+                <li class="mx-3 card shadow d-flex align-items-center">
                 <a href="/rigs/<%=rigs._id%>">
                     <img class="card-img-top" src="<%=rigs.img%>">
-                    <h5 class="card-title rig-title text-center"><%=rigs.name%></a></h5>
-                    <p class="card-text p-2"><%=rigs.frame%> on some <%=rigs.tires%> and <%=rigs.derailleur%></p>    
-                <% }) %>
+                    <div class="d-flex flex-column align-items-center">
+                        <h5 class="card-title rig-title text-center"><%=rigs.name%></a></h5>
+                        <p class="card-text p-2 "><%=rigs.frame%> on some <%=rigs.tires%> and <%=rigs.derailleur%></p>    
+                    </div>
                 </li>
+                <% }) %>
             </dd><br>
             <a href="rigs/new"><button class="btn btn-warning shadow-sm">Create a Rig</button></a><br>
         </main>

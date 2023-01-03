@@ -10,40 +10,40 @@
     <main>
         <h2>Add a new rig below:</h2>
         <div class="rig-new d-flex flex-row col col-9 shadow justify-content-center">
-        <form action="/rigs" method="POST" class="d-flex flex-row flex-wrap">
+        <form action="/rigs" method="POST" class="d-flex flex-row flex-wrap col col-12">
 			<div class="col col-6 px-2 py-2">
-                <input type="text" id="typeText" class="form-control my-2" name="name" placeholder="Rig Name">
-                <input type="text" id="typeText" class="form-control my-2" name="frame" placeholder="Frame">
-                <input type="text" id="typeText" class="form-control my-2" name="fork" placeholder="Fork">
-                <input type="text" id="typeText" class="form-control my-2" name="rims" placeholder="Rims">
-                <input type="text" id="typeText" class="form-control my-2" name="hubs" placeholder="Hubs">
-                <input type="text" id="typeText" class="form-control my-2" name="tires" placeholder="Tires">
-                <input type="text" id="typeText" class="form-control my-2" name="handlebars" placeholder="Handlebars">
-                <input type="text" id="typeText" class="form-control my-2" name="headset" placeholder="Handlebars">
-                <input type="text" id="typeText" class="form-control my-2" name="crankset" placeholder="Crankset">
-                <input type="text" id="typeText" class="form-control my-2" name="pedals" placeholder="Pedals">
+                <input type="text" class="form-control my-2" name="name" placeholder="Rig Name">
+                <input type="text" class="form-control my-2" name="frame" placeholder="Frame">
+                <input type="text" class="form-control my-2" name="fork" placeholder="Fork">
+                <input type="text" class="form-control my-2" name="rims" placeholder="Rims">
+                <input type="text" class="form-control my-2" name="hubs" placeholder="Hubs">
+                <input type="text" class="form-control my-2" name="tires" placeholder="Tires">
+                <input type="text" class="form-control my-2" name="handlebars" placeholder="Handlebars">
+                <input type="text" class="form-control my-2" name="headset" placeholder="Headset">
+                <input type="text" class="form-control my-2" name="crankset" placeholder="Crankset">
+                <input type="text" class="form-control my-2" name="pedals" placeholder="Pedals">
             </div>
             <div class="col col-6 px-2 py-2">  
-                <input type="text" id="typeText" class="form-control my-2" name="cassette" placeholder="Cassette">
-                <input type="text" id="typeText" class="form-control my-2" name="derailleur" placeholder="Derailleur">
-                <input type="text" id="typeText" class="form-control my-2" name="brakes" placeholder="Brakes">
-                <input type="text" id="typeText" class="form-control my-2" name="shifters" placeholder="Shifters">
-                <input type="text" id="typeText" class="form-control my-2" name="saddle" placeholder="Saddle">
-                <input type="text" id="typeText" class="form-control my-2" name="seatpost" placeholder="Seatpost">
-                <input type="text" id="typeText" class="form-control my-2" name="stem" placeholder="Stem">
-                <input type="text" id="typeText" class="form-control my-2" name="frontbag" placeholder="Front Bag">
-                <input type="text" id="typeText" class="form-control my-2" name="framebag" placeholder="Frame Bag">
-                <input type="text" id="typeText" class="form-control my-2" name="rearbag" placeholder="Rear Bag">
+                <input type="text" class="form-control my-2" name="cassette" placeholder="Cassette">
+                <input type="text" class="form-control my-2" name="derailleur" placeholder="Derailleur">
+                <input type="text" class="form-control my-2" name="brakes" placeholder="Brakes">
+                <input type="text" class="form-control my-2" name="shifters" placeholder="Shifters">
+                <input type="text" class="form-control my-2" name="saddle" placeholder="Saddle">
+                <input type="text" class="form-control my-2" name="seatpost" placeholder="Seatpost">
+                <input type="text" class="form-control my-2" name="stem" placeholder="Stem">
+                <input type="text" class="form-control my-2" name="frontbag" placeholder="Front Bag">
+                <input type="text" class="form-control my-2" name="framebag" placeholder="Frame Bag">
+                <input type="text" class="form-control my-2" name="rearbag" placeholder="Rear Bag">
             </div>
-            <div class="col col-12 d-flex flex-row justify-content-evenly mx-4 my-4">
-                Upload Photo:
+            <div class="col col-12 d-flex flex-row justify-content-evenly my-4">
+                Upload Photo (up to 5):
                 <form action="/rigs" method="post" enctype="multipart/form-data">
                     <div class="input-group mb-3 upload">
                         <input type="file" name="images" class="form-control" id="inputGroupFile02" multiple>
                         <label class="input-group-text" for="inputGroupFile02">Upload</label>
                       </div>
                 </form>
-                <input type="submit" class="btn btn-warning btn-large shadow mx-2 px-5" value="Add Rig" /><br>
+                <input type="submit" class="btn btn-warning btn-large shadow mx-2 px-5" value="Add Rig"><br>
 		</form>
         </div>
     </main>

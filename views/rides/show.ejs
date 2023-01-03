@@ -8,22 +8,24 @@
     <%- include('../partials/header.ejs')%>
     <!---------header/nav--------->
     <main>
-        <h1><%=rides.name%></h1>
-        <section>
-            <h2>Ride Details:</h2>
-            <ul>
-                <li>Route Name: <%= rides.name %></li>
-                <li>Start: <%= rides.start %></li>
-                <li>End: <%= rides.end %></li>
-                <li>Distance: <%= rides.distance %></li>
-                <li>Terrain: <%= rides.terrain %></li>
-                <img src="<%= rides.img %>">   
-            </ul>
-            <form action="/rides/<%=rides._id%>?_method=DELETE" method="POST">
-                <input type="submit" value="Delete Rude">
+        <section class="col-6 d-flex flex-wrap flex-column">
+            <h1><%=rides.name%></h1>
+            <dd>
+                 <li class="rig-details">Route Name: <span class="specs"><%= rides.name %></span></li>
+                 <li class="rig-details">Start: <span class="specs"><%= rides.start%></span></li>
+                 <li class="rig-details">End: <span class="specs"><%= rides.end%></span></li>
+                 <li class="rig-details">Distance: <span class="specs"><%= rides.distance%></span></li>
+                 <li class="rig-details">Terrain: <span class="specs"><%= rides.terrain %></span></li>
+            </dd>
+        <div class="d-flex flex-row"> 
+            <a href="/rides/<%= rides._id %>/edit"><button class="btn btn-warning px-4">Edit Ride</button></a>
+            <form class="flex-row mx-4" action="/rigs/<%=rides._id%>?_method=DELETE" method="POST">
+                <input type="submit" class="btn btn-danger" value="Delete Ride">
             </form>
-            <a href="/rides/<%= rides._id %>/edit">EDIT RIDE</a>
-        </section>
+        </div>
     </main>
+     <!---------footer/animation---------> 
+     <%- include('../partials/footer.ejs')%>
+     <!---------footer/animation---------> 
 </body>
 </html>
