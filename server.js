@@ -42,6 +42,7 @@ app.use(
 app.use('/rides', ridesController)
 app.use('/rigs', rigsController)
 
+
 // populates req.body with parsed info from forms - if no data from forms will return an empty object {}
 app.use(express.urlencoded({ extended: false }));// extended: false - does not allow nested objects in query strings
 app.use(express.json());// returns middleware that only parses JSON - may or may not need it depending on your project
@@ -107,6 +108,10 @@ app.get('/login', (req,res) => {
 
 app.get('/register', (req,res) => {
   res.render('register.ejs')
+})
+
+app.post('/register', (req,res) => {
+
 })
 
 //Listener

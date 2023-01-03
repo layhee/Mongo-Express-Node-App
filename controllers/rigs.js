@@ -4,24 +4,24 @@ const multer = require('multer')
 const Rig = require('../models/rigs.js')
 
 // file upload middleware
-const fileStorageEngine = multer.diskStorage({
-    destination: (req, file, cb) => {
-      cb(null, './public/img')
-    },  
-    filename: (req, file, cb) => {
-      cb(null, Date.now() + '_' + file.originalname)
-    }
-  })
-  const upload = multer({storage: fileStorageEngine})
+// const fileStorageEngine = multer.diskStorage({
+//     destination: (req, file, cb) => {
+//       cb(null, './public/img')
+//     },  
+//     filename: (req, file, cb) => {
+//       cb(null, Date.now() + '_' + file.originalname)
+//     }
+//   })
+//   const upload = multer({storage: fileStorageEngine})
 
-// INDEX
-router.get('/', (req,res) => {
-    Rig.find({}, (error, foundRig) => {
-        res.render('rigs/index.ejs', {
-            rigs: foundRig
-        })
-    })
-})
+// // INDEX
+// router.get('/', (req,res) => {
+//     Rig.find({}, (error, foundRig) => {
+//         res.render('rigs/index.ejs', {
+//             rigs: foundRig
+//         })
+//     })
+// })
 
 // NEW
 router.get('/new', (req,res) => {
@@ -48,15 +48,15 @@ router.post('/', (req,res) => {
         res.redirect('/rigs')
     })
 })
-router.post ('/single', upload.single('image'), (req,res) => {
-    console.log(req.file);
-    res.send('Single file upload success')
-  })
+// router.post ('/single', upload.single('image'), (req,res) => {
+//     console.log(req.file);
+//     res.send('Single file upload success')
+//   })
   
-router.post('/multiple', upload.array('images', 5), (req,res) => {
-    console.log(req.files)
-    res.send('multiple is cool')
-})
+// router.post('/multiple', upload.array('images', 5), (req,res) => {
+//     console.log(req.files)
+//     res.send('multiple is cool')
+// })
   
 // EDIT
 router.get('/:id/edit', (req,res) => {
