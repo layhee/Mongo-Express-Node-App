@@ -20,7 +20,7 @@ router.get('/', (req,res) => {
     Rig.find({}, (error, foundRig) => {
         res.render('rigs/index.ejs', {
             rigs: foundRig,
-            isAthenticated: req.oidc.isAuthenticated(),
+            // isAthenticated: req.oidc.isAuthenticated(),
         })
     })
 })
