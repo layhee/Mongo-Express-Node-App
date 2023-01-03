@@ -5,7 +5,6 @@ const mongoose = require('mongoose');
 const session = require('express-session')
 require('dotenv').config()
 const bcrypt = require('bcrypt')
-// const multer = require('multer')
 const app = express();
 const db = mongoose.connection;
 const rigData = require('./rig-data')
@@ -42,27 +41,6 @@ app.use(
 )
 app.use('/rides', ridesController)
 app.use('/rigs', rigsController)
-
-// // file upload middleware
-// const fileStorageEngine = multer.diskStorage({
-//   destination: (req, file, cb) => {
-//     cb(null, './public/img')
-//   },  
-//   filename: (req, file, cb) => {
-//     cb(null, Date.now() + '_' + file.originalname)
-//   }
-// })
-// const upload = multer({storage: fileStorageEngine})
-
-// app.post ('/single', upload.single('image'), (req,res) => {
-//   console.log(req.file);
-//   res.send('Single file upload success')
-// })
-
-// app.post('/multiple', upload.array('images', 5), (req,res) => {
-//   console.log(req.files)
-//   res.send('multiple is cool')
-// })
 
 // populates req.body with parsed info from forms - if no data from forms will return an empty object {}
 app.use(express.urlencoded({ extended: false }));// extended: false - does not allow nested objects in query strings
@@ -129,10 +107,6 @@ app.get('/login', (req,res) => {
 
 app.get('/register', (req,res) => {
   res.render('register.ejs')
-})
-
-app.post('/register', (req,res) => {
-
 })
 
 //Listener
