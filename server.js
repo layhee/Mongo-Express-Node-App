@@ -15,19 +15,20 @@ const Ride = require('./models/rides.js')
 const config = {
   authRequired: false,
   auth0Logout: true,
-  baseURL: 'hhttps://rigs-n-routes.herokuapp.com/',
-  clientID: 'znaxbwaFjGGr44Q6HTTIjeVgXsTC8Ecu',
-  issuerBaseURL: 'https://dev-pd4r04igrfdmtnlu.us.auth0.com',
-  secret: 'stillsinthesehills'
+  baseURL: process.env.BASEURL,
+  clientID: process.env.CLIENTID,
+  issuerBaseURL: process.env.ISSUER,
+  secret: process.env.SECRET,
 };
 
 // auth router attaches /login, /logout, and /callback routes to the baseURL
 app.use(auth(config));
 
 // req.isAuthenticated is provided from the auth router
-app.get('/', (req, res) => {
-  res.send(req.oidc.isAuthenticated() ? res.redirect('/rigs/new') : res.render('index.ejs'))
-});
+// app.get('/', (req, res) => {
+//   console.log(req.oidc.isAuthenticated());
+//   res.send(req.oidc.isAuthenticated() ? 'Logged in' : 'Logged out')
+// });
 
 //Port
 // Allow use of Heroku's port or your own local port, depending on the environment
@@ -60,18 +61,18 @@ app.get('/' , (req, res) => {
   res.render('index.ejs');
 });
 
-// Login + Register Routes
-app.get('/login', (req,res) => {
-  res.render('login.ejs')
-})
+// // Login + Register Routes
+// app.get('/login', (req,res) => {
+//   res.render('login.ejs')
+// })
 
-app.get('/register', (req,res) => {
-  res.render('register.ejs')
-})
+// app.get('/register', (req,res) => {
+//   res.render('register.ejs')
+// })
 
-app.post('/register', (req,res) => {
+// app.post('/register', (req,res) => {
 
-})
+// })
 
 app.get('/rigs/seed', (req,res) => {
   Rig.create(rigData, (err) => {

@@ -19,7 +19,8 @@ const upload = multer({storage: fileStorageEngine})
 router.get('/', (req,res) => {
     Rig.find({}, (error, foundRig) => {
         res.render('rigs/index.ejs', {
-            rigs: foundRig
+            rigs: foundRig,
+            isAthenticated: req.oidc.isAuthenticated(),
         })
     })
 })

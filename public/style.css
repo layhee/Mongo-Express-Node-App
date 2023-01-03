@@ -125,7 +125,7 @@ footer{
     bottom: 0;
     background: url(https://dev.lehi.work/m1.svg) repeat-x;
     background-size: 400%;
-    animation: scroll-anim 32s linear infinite;
+    animation: scroll-anim 38s linear infinite;
     z-index: -100;
 }
 @keyframes scroll-anim {
