@@ -25,8 +25,8 @@ const config = {
 app.use(auth(config));
 
 // req.isAuthenticated is provided from the auth router
-app.get('/rigs/new', (req, res) => {
-  res.send(req.oidc.isAuthenticated() ? res.redirect('/rigs') : res.render('index.ejs'))
+app.get('/', (req, res) => {
+  res.send(req.oidc.isAuthenticated() ? res.redirect('/rigs/new') : res.render('index.ejs'))
 });
 
 //Port
