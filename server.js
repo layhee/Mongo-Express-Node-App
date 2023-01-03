@@ -2,7 +2,10 @@
 const express = require('express');
 const methodOverride = require('method-override');
 const mongoose = require('mongoose');
+const session = require('express-session')
 require('dotenv').config()
+const bcrypt = require('bcrypt')
+// const multer = require('multer')
 const app = express();
 const db = mongoose.connection;
 const rigData = require('./rig-data')
@@ -30,11 +33,39 @@ db.on('disconnected', () => console.log('mongod disconnected'));
 //Middleware
 app.use(methodOverride('_method'));
 app.use(express.static('public'));
+app.use(
+  session({
+    secret: process.env.SECRET,
+    resave: false,
+    saveUninitialized: false,
+  })
+)
 app.use('/rides', ridesController)
 app.use('/rigs', rigsController)
 
+// // file upload middleware
+// const fileStorageEngine = multer.diskStorage({
+//   destination: (req, file, cb) => {
+//     cb(null, './public/img')
+//   },  
+//   filename: (req, file, cb) => {
+//     cb(null, Date.now() + '_' + file.originalname)
+//   }
+// })
+// const upload = multer({storage: fileStorageEngine})
+
+// app.post ('/single', upload.single('image'), (req,res) => {
+//   console.log(req.file);
+//   res.send('Single file upload success')
+// })
+
+// app.post('/multiple', upload.array('images', 5), (req,res) => {
+//   console.log(req.files)
+//   res.send('multiple is cool')
+// })
+
 // populates req.body with parsed info from forms - if no data from forms will return an empty object {}
-app.use(express.urlencoded({ extended: true }));// extended: false - does not allow nested objects in query strings
+app.use(express.urlencoded({ extended: false }));// extended: false - does not allow nested objects in query strings
 app.use(express.json());// returns middleware that only parses JSON - may or may not need it depending on your project
 
 
@@ -54,6 +85,55 @@ app.get('/rides/seed', (req,res) => {
 app.get('/' , (req, res) => {
   res.render('index.ejs');
 });
+
+// // Authorization
+// app.get('/hashed', (req,res) => {
+//   const hashedString = bcrypt.hashSync('example', bcrypt.genSaltSync(10))
+//   const isSameString = bcrypt.compareSync('yourGuessHere', hashedString)
+//   res.send(isSameString)
+// })
+
+// app.get('/any', (req,res) => {
+//   req.session.anyProperty = 'anything you want it to be'
+//   res.send('sup')
+// })
+
+// app.get('/update', (req,res) => {
+//   req.session.anyProperty = 'something'
+//   res.send('dis da route for updating something')
+// })
+
+// app.get('/retrieve', (req,res) => {
+//   if (req.session.anyProperty === 'anything you want it to be') {
+//     res.send('coolio')
+//   } else {
+//     res.send('nope')
+//   }
+// })
+// app.get('/destroy', (req,res) => {
+//   req.session.destroy((error) => {
+//     if (error) {
+//       res.send(error)
+//     } else {
+//       res.send({
+//         success: true
+//       })
+//     }
+//   })
+// })
+
+// Login + Register Routes
+app.get('/login', (req,res) => {
+  res.render('login.ejs')
+})
+
+app.get('/register', (req,res) => {
+  res.render('register.ejs')
+})
+
+app.post('/register', (req,res) => {
+
+})
 
 //Listener
 app.listen(PORT, () => console.log('express is listening on:', PORT));

@@ -9,8 +9,7 @@ dark orange - #BC6C25 */
     margin: 0;
     padding: 0;
     box-sizing: border-box; 
- }
- 
+}
 body{
     margin: 0 0;
     padding: 0 0;
@@ -132,15 +131,17 @@ footer{
         background-position: 100% 0;
     }
 }
-
 .rig-details{
-    background-color: #86974e;
     margin: 2px 0;
     padding: 8px 4px;
-    color: #fff;
+    color: #666;
     font-family: 'Fragment Mono', sans-serif;
     border-radius: 4px;
     z-index: 200;
+    text-transform: uppercase;
+}
+.rig-new{
+    background-color: #86974e;
 }
 .rig-title{
     color: #BC6C25;
@@ -158,4 +159,14 @@ footer{
 }
 .upload{
     width: auto;
+}
+.specs{
+    font-family: 'Chivo Mono', sans-serif;
+    font-weight: 700;
+    font-style: italic;
+    color: #DDA15E;
+}
+.container{
+    z-index: 200;
+    position: relative;
 }

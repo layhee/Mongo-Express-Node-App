@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<!---------head--------->
+<%- include('./partials/head.ejs')%>
+<!---------head--------->
+<body>
+    <div class="wrap">
+    <main class="d-flex justify-content-center">
+        <!-- <h2>Hello Friend!</h2> -->
+        <h1 class="welcome">Bikepacking <br>Rigs + Routes</h1>
+        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+        <lottie-player src="https://assets2.lottiefiles.com/packages/lf20_8U9oxZ99YL.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop  autoplay></lottie-player>
+        <div class="nav">
+            <form action="/login" method="POST">
+                <div>
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div>
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+            <button class="btn btn-warning btn-lg mx-2 shadow">Log In</button>
+            </form>  
+        </div><br>
+            <a href="/register"><button class="btn btn-warning btn-lg mx-2 shadow">Register</button></a>
+            <a href="/rigs"><button class="btn btn-success btn-sm px-5 shadow-sm" action="">View Rigs</button></a><br>
+            <a href="/rides"><button class="btn btn-success btn-sm px-5 shadow-sm">View Rides</button></a>
+    </main>
+    </div>
+    <%- include('./partials/footer.ejs')%>
+</body>
+</html>

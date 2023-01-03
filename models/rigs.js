@@ -1,8 +1,9 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
-const rigSchema = new Schema({
-    name: String,
+const rigSchema = new Schema(
+    {
+    name: 'String',
     frame: String,
     fork: String,
     rims: String,
@@ -24,7 +25,7 @@ const rigSchema = new Schema({
     rearbag: String,
     img: String,
 }, {
-    timestamps: true
+    timestamps: true,
 })
 
 module.exports = mongoose.model('Rig', rigSchema)

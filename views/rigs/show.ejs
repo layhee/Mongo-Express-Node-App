@@ -9,39 +9,44 @@
     <!---------header/nav--------->
     <main class="container">
         <div class="row">
-        <h1><%= rig.name%></h1>
         <section class="col-6 fluid">
-            <img class="img-fluid" src="<%= rig.img %>">
+            <h1 class="my-0"><%= rig.name%></h1>
+            <img class="img-fluid shadow img-show" src="<%= rig.img %>">
         </section>
-        <section class="col-6">
+        <section class="col-6 d-flex flex-wrap flex-column">
             <h2>Rig Details:</h2>
-            <ul>
-                <li class="rig-details">Frame: <%= rig.frame %></li>
-                 <li class="rig-details">Fork: <%= rig.fork %></li>
-                 <li class="rig-details">Rims: <%= rig.rims %></li>
-                 <li class="rig-details">Hubs: <%= rig.hubs %></li>
-                 <li class="rig-details">Tires: <%= rig.tires %></li>
-                 <li class="rig-details">Handlebars: <%= rig.handlebars %></li>
-                 <li class="rig-details">Headset: <%= rig.headset %></li>
-                 <li class="rig-details">Crankset: <%= rig.crankset %></li>
-                 <li class="rig-details">Pedals: <%= rig.pedals %></li>
-                 <li class="rig-details">Cassette: <%= rig.cassette %></li>
-                 <li class="rig-details">Derailleur: <%= rig.derailleur %></li>
-                 <li class="rig-details">Brakes: <%= rig.brakes %></li>
-                 <li class="rig-details">Shifters: <%= rig.shifters %></li>
-                 <li class="rig-details">Saddle: <%= rig.saddle %></li>
-                 <li class="rig-details">Seatpost: <%= rig.seatpost %></li>
-                 <li class="rig-details">Stem: <%= rig.stem %></li>
-                 <li class="rig-details">Front Bag: <%= rig.frontbag %></li>
-                 <li class="rig-details">Frame Bag: <%= rig.framebag %></li>
-                 <li class="rig-details">Rear Bag: <%= rig.rearbag %></li>                
-            </ul>
-            <form action="/rigs/<%=rig._id%>?_method=DELETE" method="POST">
-                <input type="submit" value="Delete Rig">
-            </form>
-            <a href="/rigs/<%= rig._id %>/edit">EDIT RIG</a>
+            <dd>
+                 <li class="rig-details">Frame: <span class="specs"><%= rig.frame %></span></li>
+                 <li class="rig-details">Fork: <span class="specs"><%= rig.fork %></span></li>
+                 <li class="rig-details">Rims: <span class="specs"><%= rig.rims %></span></li>
+                 <li class="rig-details">Hubs: <span class="specs"><%= rig.hubs %></span></li>
+                 <li class="rig-details">Tires: <span class="specs"><%= rig.tires %></span></li>
+                 <li class="rig-details">Handlebars: <span class="specs"><%= rig.handlebars %></span></li>
+                 <li class="rig-details">Headset: <span class="specs"><%= rig.headset %></span></li>
+                 <li class="rig-details">Crankset: <span class="specs"><%= rig.crankset %></span></li>
+                 <li class="rig-details">Pedals: <span class="specs"><%= rig.pedals %></span></li>
+                 <li class="rig-details">Cassette: <span class="specs"><%= rig.cassette %></span></li>
+                 <li class="rig-details">Derailleur: <span class="specs"><%= rig.derailleur %></span></li>
+                 <li class="rig-details">Brakes: <span class="specs"><%= rig.brakes %></span></li>
+                 <li class="rig-details">Shifters: <span class="specs"><%= rig.shifters %></span></li>
+                 <li class="rig-details">Saddle: <span class="specs"><%= rig.saddle %></span></li>
+                 <li class="rig-details">Seatpost: <span class="specs"><%= rig.seatpost %></span></li>
+                 <li class="rig-details">Stem: <span class="specs"><%= rig.stem %></span></li>
+                 <li class="rig-details">Front Bag: <span class="specs"><%= rig.frontbag %></span></li>
+                 <li class="rig-details">Frame Bag: <span class="specs"><%= rig.framebag %></span></li>
+                 <li class="rig-details">Rear Bag: <span class="specs"><%= rig.rearbag %></span> </li>                
+            </dd>
+            <div class="d-grid gap-2 d-md-block"> 
+                <form class="flex-row" action="/rigs/<%=rig._id%>?_method=DELETE" method="POST">
+                    <input type="submit" class="btn btn-success" value="Delete Rig">
+                </form>
+                <a href="/rigs/<%= rig._id %>/edit"><button class="btn btn-warning px-4">Edit Rig</button></a>
+            </div>
         </section>
     </div>
     </main>
+    <!---------footer/animation---------> 
+    <%- include('../partials/footer.ejs')%>
+    <!---------footer/animation---------> 
 </body>
 </html>
