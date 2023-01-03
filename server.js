@@ -2,7 +2,7 @@
 const express = require('express');
 const methodOverride = require('method-override');
 const mongoose = require('mongoose');
-const session = require('express-session')
+// const session = require('express-session')
 require('dotenv').config()
 const bcrypt = require('bcrypt')
 const app = express();
@@ -32,13 +32,13 @@ db.on('disconnected', () => console.log('mongod disconnected'));
 //Middleware
 app.use(methodOverride('_method'));
 app.use(express.static('public'));
-app.use(
-  session({
-    secret: process.env.SECRET,
-    resave: false,
-    saveUninitialized: false,
-  })
-)
+// app.use(
+//   session({
+//     secret: process.env.SECRET,
+//     resave: false,
+//     saveUninitialized: false,
+//   })
+// )
 app.use('/rides', ridesController)
 app.use('/rigs', rigsController)
 
