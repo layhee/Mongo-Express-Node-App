@@ -15,7 +15,7 @@ const Ride = require('./models/rides.js')
 const config = {
   authRequired: false,
   auth0Logout: true,
-  baseURL: 'http://localhost:3000',
+  baseURL: 'hhttps://rigs-n-routes.herokuapp.com/',
   clientID: 'znaxbwaFjGGr44Q6HTTIjeVgXsTC8Ecu',
   issuerBaseURL: 'https://dev-pd4r04igrfdmtnlu.us.auth0.com',
   secret: 'stillsinthesehills'
@@ -25,7 +25,7 @@ const config = {
 app.use(auth(config));
 
 // req.isAuthenticated is provided from the auth router
-app.get('/', (req, res) => {
+app.get('/rigs/new', (req, res) => {
   res.send(req.oidc.isAuthenticated() ? res.redirect('/rigs') : res.render('index.ejs'))
 });
 
