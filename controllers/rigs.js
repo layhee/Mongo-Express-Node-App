@@ -14,16 +14,15 @@ const Rig = require('../models/rigs.js')
 //   })
 //   const upload = multer({storage: fileStorageEngine})
 
-// // INDEX
-// router.get('/', (req,res) => {
-//     Rig.find({}, (error, foundRig) => {
-//         res.render('rigs/index.ejs', {
-//             rigs: foundRig
-//         })
-//     })
-// })
+// INDEX
+router.get('/', (req,res) => {
+    Rig.find({}, (error, foundRig) => {
+        res.render('rigs/index.ejs', {
+            rigs: foundRig
+        })
+    })
+})
 
-// NEW
 router.get('/new', (req,res) => {
     res.render('rigs/new.ejs')
 })
