@@ -19,16 +19,11 @@
                 <input type="text" class="form-control my-2" name="terrain" placeholder="Type of Terrain">
                 <input type="textarea" class="form-control my-2" name="desc" placeholder="Brief Description of What You'll See">
             </div>
-            <div class="col col-12 d-flex flex-row justify-content-evenly my-4">
-                Upload Photo (up to 5):
-                <form action="/rigs" method="post" enctype="multipart/form-data">
-                    <div class="input-group mb-3 upload">
-                        <input type="file" name="images" class="form-control" id="inputGroupFile02" multiple>
-                        <label class="input-group-text" for="inputGroupFile02">Upload</label>
-                      </div>
-                </form>
-                <input type="submit" class="btn btn-warning btn-large shadow mx-2 px-5" value="Add Ride"><br>
-		</form>
+            <div class="col col-12 px-2">
+                <h6>Upload photo</h6>
+                <input type="file" name="img" class="filepond">
+            </div>
+            <input type="submit" class="btn btn-warning btn-large shadow mx-2 px-5 mb-4 text-center" value="Add Ride">
         </div>
     </main>
      <!---------footer/animation---------> 

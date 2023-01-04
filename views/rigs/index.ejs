@@ -9,9 +9,9 @@
         <!---------header/nav--------->
         <main>
             <h2>Featured Rigs</h2><br>
-            <dd class="col-11 d-flex flex-row">
+            <dd class="col-11 d-flex flex-row flex-wrap">
                 <%rigs.forEach(rigs => { %>
-                <li class="mx-3 card shadow d-flex align-items-center">
+                <li class="mx-3 card shadow d-flex align-items-center mb-4" style="width: 25%; max-width: 320px;">
                 <a href="/rigs/<%=rigs._id%>">
                     <img class="card-img-top" src="<%=rigs.img%>">
                     <div class="d-flex flex-column align-items-center">

@@ -52,6 +52,16 @@ li{
     --bs-nav-link-color: #FEFAE0;
     --bs-nav-link-hover-color:#d4d0b9; 
 }
+.logo-bg{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(/img/rnr-logo.png);
+    background-size: cover;
+    height: 300px;
+    width: 320px;
+    background-repeat: no-repeat;
+}
 .wrap{
     background-color: #FEFAE0;
     background-image: linear-gradient(180deg, #f053e0 0%, #ffc022 45%);
@@ -73,7 +83,7 @@ li{
 	}
 }
 main{
-    margin: 66px 0;
+    margin: 120px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
