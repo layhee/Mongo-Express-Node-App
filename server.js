@@ -2,7 +2,6 @@
 const express = require('express');
 const methodOverride = require('method-override');
 const mongoose = require('mongoose');
-const { auth } = require('express-openid-connect');
 require('dotenv').config()
 const app = express();
 const db = mongoose.connection;
@@ -12,23 +11,7 @@ const ridesController = require('./controllers/rides.js')
 const rigsController = require('./controllers/rigs.js')
 const Rig = require('./models/rigs.js')
 const Ride = require('./models/rides.js')
-// const config = {
-//   authRequired: false,
-//   auth0Logout: true,
-//   baseURL: process.env.BASEURL,
-//   clientID: process.env.CLIENTID,
-//   issuerBaseURL: process.env.ISSUER,
-//   secret: process.env.SECRET,
-// };
-
-// auth router attaches /login, /logout, and /callback routes to the baseURL
-// app.use(auth(config));
-
-// req.isAuthenticated is provided from the auth router
-// app.get('/', (req, res) => {
-//   console.log(req.oidc.isAuthenticated());
-//   res.send(req.oidc.isAuthenticated() ? 'Logged in' : 'Logged out')
-// });
+mongoose.set('strictQuery', true)
 
 //Port
 // Allow use of Heroku's port or your own local port, depending on the environment
@@ -61,18 +44,6 @@ app.get('/' , (req, res) => {
   res.render('index.ejs');
 });
 
-// // Login + Register Routes
-// app.get('/login', (req,res) => {
-//   res.render('login.ejs')
-// })
-
-// app.get('/register', (req,res) => {
-//   res.render('register.ejs')
-// })
-
-// app.post('/register', (req,res) => {
-
-// })
 
 app.get('/rigs/seed', (req,res) => {
   Rig.create(rigData, (err) => {

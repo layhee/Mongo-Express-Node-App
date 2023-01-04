@@ -36,15 +36,10 @@
                     <input type="text" class="form-control my-2" name="framebag" value="<%=rig.framebag%>" placeholder="Frame Bag">
                     <input type="text" class="form-control my-2" name="rearbag" value="<%=rig.rearbag%>" placeholder="Rear Bag">
                 </div>
-                <div class="col d-flex flex-row justify-content-evenly mx-4 my-4">
-                    Upload Photo:
-                <form action="/rigs" method="post" enctype="multipart/form-data">
-                    <div class="input-group mb-3 upload">
-                        <input type="file" name="images" class="form-control" id="inputGroupFile02" multiple>
-                        <label class="input-group-text" for="inputGroupFile02">Upload</label>
-                      </div>
-                </form>
-                    <input type="submit" value="Update Rig" class="btn btn-warning btn-large shadow mx-2 px-5">
+                <div class="col col-12 px-2 mb-4">
+                    <h6>Upload photo</h6>
+                    <input type="file" name="img" class="filepond">
+                    <input type="submit" class="btn btn-warning btn-large shadow mx-2 px-5" value="Add Rig">
                 </div>
                 </form>
         </section>

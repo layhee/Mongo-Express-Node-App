@@ -10,11 +10,17 @@
         <h1 class="welcome">Bikepacking <br>Rigs + Routes</h1>
         <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
         <lottie-player src="https://assets2.lottiefiles.com/packages/lf20_8U9oxZ99YL.json"  background="transparent"  speed=".8"  style="width: 300px; height: 300px;"  loop  autoplay></lottie-player>
-        <div class="nav">
-            <a href="/login"><button class="btn btn-warning btn-lg px-5 shadow">Login</button></a>
-        </div><br>
-            <a href="/rigs"><button class="btn btn-success btn-sm px-5 shadow-sm" action="">View Rigs</button></a><br>
-            <a href="/rides"><button class="btn btn-success btn-sm px-5 shadow-sm">View Rides</button></a>
+        <div class="d-flex flex-column">
+            <h2>Welcome! Start by checking out some Bikepacking Rigs and Routes!</h2><br>
+            <!-- <form action="/rigs" method="post">
+                    <input type="file" name="img" class="filepond">
+                    <input class="btn btn-primary" type="submit"></input>
+            </form> -->
+            <div class="nav justify-content-center">
+            <a href="/rigs"><button class="btn btn-success btn-lg px-5 mx-5 shadow-sm" action="">View Rigs</button></a><br>
+            <a href="/rides"><button class="btn btn-success btn-lg px-5 mx-5 shadow-sm">View Routes</button></a>
+            </div>
+        </div>
     </main>
     </div>
     <%- include('./partials/footer.ejs')%>

@@ -33,6 +33,7 @@ h1{
     color: rgb(255, 180, 4);
     font-weight: 800;
     margin: 24px 0;
+    text-shadow: 2px 2px 2px rgb(163 114 10 / 80%);
 }
 h2{
     font-family: 'Bitter', serif;

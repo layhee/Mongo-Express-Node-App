@@ -1,19 +1,6 @@
 const express = require('express')
 const router = express.Router()
-const multer = require('multer')
 const Rig = require('../models/rigs.js')
-
-// file upload middleware
-const fileStorageEngine = multer.diskStorage({
-    destination: (req, file, cb) => {
-      cb(null, './public/img')
-    },  
-    filename: (req, file, cb) => {
-      cb(null, Date.now() + '_' + file.originalname)
-    }
-  })
-
-const upload = multer({storage: fileStorageEngine})
 
 // INDEX
 router.get('/', (req,res) => {
@@ -51,16 +38,6 @@ router.post('/', (req,res) => {
     })
 })
 
-router.post ('/rigs', upload.single('image'), (req,res) => {
-    console.log(req.file)
-    console.log('Single file upload success')
-  })
-  
-router.post('/rigs/uploads', upload.array('images', 5), (req,res) => {
-    console.log(req.files)
-    console.log('multiple is cool')
-})
-  
 // EDIT
 router.get('/:id/edit', (req,res) => {
     Rig.findById(req.params.id, (error, foundRig) => {
@@ -78,5 +55,12 @@ router.get('/:id', (req,res) => {
         })
     })
 })
+
+// saveImg(rig, req.body.img)
+
+// function saveImg(rig, imgEncoded) {
+//     const image = JSON.parse(imgEncoded)
+//     rig.img = new Buffer.from(img.data, 'base64') 
+// }
 
 module.exports = router
