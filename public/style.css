@@ -221,7 +221,8 @@ footer{
     }
     header {
         font-size: 1rem;
-       }
+        padding: 12px 0;
+    }
     .show-fluid{
         width: 100%; 
         max-width: 666px;
@@ -233,6 +234,9 @@ footer{
 }
 
 @media (max-width: 767.98px) {
+    h1{
+        margin: 12px 0;
+    }
    .rnr-card{
     width: 100%;
    }
@@ -242,5 +246,14 @@ footer{
    .logo-header{
     max-height: 60px;
     margin: 0 16px;
+    }
 }
+
+@media (max-width: 576px) {
+    .head-title{
+        display: none;
+    }
+    header{
+        justify-content: space-between;
+    }
 }

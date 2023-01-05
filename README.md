@@ -1,4 +1,4 @@
-# ![WebApp](/public/img/scr-index.png)
+<img width="150px" src='https://dev.lehi.work/rnr-logo-w.png'>
 
 # Rigs & Routes
 
@@ -18,19 +18,21 @@ Check it out here : https://rigs-n-routes.herokuapp.com/
 
 ### Landing Page
 
-A log in button using auth0 on top of a nice sky
+A nice place to land giving the user instructions on where to start.
 
-![](https://iharsh234.github.io/WebApp/images/demo/web_app_face.JPG)
+![](https://dev.lehi.work/scr-home.png)
 
-### Query Filled Form
+### Index of Bikepacking Rigs
 
-![](https://iharsh234.github.io/WebApp/images/demo/demo_query.JPG)
+![](https://dev.lehi.work/scr-rig-index.png)
 
-## Mobile support
+## Built for Mobile
 
-The WebApp is compatible with devices of all sizes and all OS's, and consistent improvements are being made.
+Built with Bootstrap to respond to a variety of screen sizes and types.
 
-![](https://iharsh234.github.io/WebApp/images/demo/mobile.png)
+<img src="https://dev.lehi.work/scr-mob-land.png" width="33%">
+<img src="https://dev.lehi.work/scr-mob-ride-index.png" width="33%">
+<img src="https://dev.lehi.work/scr-mob-ride.png" width="33%">
 
 ## [Usage](https://iharsh234.github.io/WebApp/)
 
