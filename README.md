@@ -34,9 +34,7 @@ Built with Bootstrap to respond to a variety of screen sizes and types.
 
 ### Phones
 
-<img src="https://dev.lehi.work/scr-mob-land.png" width="30%">
-<img src="https://dev.lehi.work/scr-mob-ride-index.png" width="30%">
-<img src="https://dev.lehi.work/scr-mob-ride.png" width="30%" >
+<img src="https://dev.lehi.work/scr-mob-land.png" width="30%"><img src="https://dev.lehi.work/scr-mob-ride-index.png" width="30%"><img src="https://dev.lehi.work/scr-mob-ride.png" width="30%">
 
 ### Tablets
 
