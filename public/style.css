@@ -239,4 +239,8 @@ footer{
    .wrap{
     width:100%
    }
+   .logo-header{
+    max-height: 60px;
+    margin: 0 16px;
+}
 }
