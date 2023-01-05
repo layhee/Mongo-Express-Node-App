@@ -56,11 +56,4 @@ router.get('/:id', (req,res) => {
     })
 })
 
-// saveImg(rig, req.body.img)
-
-// function saveImg(rig, imgEncoded) {
-//     const image = JSON.parse(imgEncoded)
-//     rig.img = new Buffer.from(img.data, 'base64') 
-// }
-
 module.exports = router

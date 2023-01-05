@@ -11,7 +11,7 @@
         <h2>Featured Rides</h2><br>
         <dd class="col-11 d-flex flex-row">
             <%rides.forEach(rides => { %>
-            <li class="mx-3 card shadow d-flex align-items-center">
+            <li class="mx-3 card shadow d-flex align-items-center" style="width: 25%; max-width: 320px;"">
             <a href="/rides/<%=rides._id%>">
                 <img class="card-img-top" src="<%=rides.img%>">
                 <div class="d-flex flex-column align-items-center">
