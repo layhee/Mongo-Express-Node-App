@@ -203,10 +203,19 @@ footer{
     h1{
         font-size: 1.8rem;
     }
+    h2{
+        font-size: 1.6rem;
+    }
+    header {
+        font-size: 1rem;
+       }
 }
 
 @media (max-width: 767.98px) {
    .rnr-card{
     width: 100%;
-   } 
+   }
+   .wrap{
+    widt:100%
+   }
 }

@@ -9,9 +9,9 @@
     <!---------header/nav--------->
     <main>
         <h2>Featured Rides</h2><br>
-        <dd class="col-11 d-flex flex-row">
+        <dd class="col col-12 d-flex flex-row flex-wrap justify-content-center">
             <%rides.forEach(rides => { %>
-            <li class="mx-3 card shadow d-flex align-items-center" style="width: 25%; max-width: 320px;"">
+                <li class="mx-3 card shadow d-flex align-items-center mb-4 rnr-card">
             <a href="/rides/<%=rides._id%>">
                 <img class="card-img-top" src="<%=rides.img%>">
                 <div class="d-flex flex-column align-items-center">
