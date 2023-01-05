@@ -10,6 +10,26 @@
 </tr>
 </table>
 
+## Development
+
+Technologies Used:
+
+[![My Skills](https://skillicons.dev/icons?i=nodejs,express,mongodb,heroku,bootstrap,svg,figma,illustrator,github,js,html,css,vscode)](https://skillicons.dev)
+
+- Node.js
+- Express.js
+- Mongo DB
+- Heroku
+- Bootstrap
+- SVG
+- Figma
+- Adobe Illustrator
+- Github
+- JS
+- HTML
+- CSS
+- Visual Studio Code
+
 ## Demo
 
 Check it out here : https://rigs-n-routes.herokuapp.com/
@@ -34,36 +54,15 @@ Built with Bootstrap to respond to a variety of screen sizes and types.
 
 ### Phones
 
-<img src="https://dev.lehi.work/scr-mob-land.png" width="30%"><img src="https://dev.lehi.work/scr-mob-ride-index.png" width="30%"><img src="https://dev.lehi.work/scr-mob-ride.png" width="30%">
+<img src="https://dev.lehi.work/scr-mob-land.png" width="33%"><img src="https://dev.lehi.work/scr-mob-ride-index.png" width="33%"><img src="https://dev.lehi.work/scr-mob-ride.png" width="33%">
 
 ### Tablets
 
-<img src="https://dev.lehi.work/scr-med-ride.png" width="49%" >
-<img src="https://dev.lehi.work/scr-med-rigs.png" width="49%" >
+<img src="https://dev.lehi.work/scr-med-ride.png" width="49%"><img src="https://dev.lehi.work/scr-med-rigs.png" width="49%">
 
 ---
 
-## Development
-
-Technologies Used:
-
-[![My Skills](https://skillicons.dev/icons?i=nodejs,express,mongodb,heroku,bootstrap,svg,figma,illustrator,github,js,html,css,vscode)](https://skillicons.dev)
-
-- Node.js
-- Express.js
-- Mongo DB
-- Heroku
-- Bootstrap
-- SVG
-- Figma
-- Adobe Illustrator
-- Github
-- JS
-- HTML
-- CSS
-- Visual Studio Code
-
-## To-do
+## To-do / Future Updates
 
 - Make file upload fully functional
 - Allow multiple image uploads and organize in a gallery display (carousel maybe?)
