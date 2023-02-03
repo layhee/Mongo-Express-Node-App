@@ -118,7 +118,7 @@ footer{
     height: 30vw;
     position: fixed;
     bottom: 0;
-    background-image: url(https://dev.lehi.work/mt3.svg);
+    background-image: url(https://lehi.me/img/mt3.svg);
     background-repeat: repeat-x;
     background-size: 200%;
     animation: scroll-anim 80s linear infinite;
@@ -132,7 +132,7 @@ footer{
     height: 30vw;
     position: fixed;
     bottom: 0;
-    background: url(https://dev.lehi.work/mt2.svg) repeat-x;
+    background: url(https://lehi.me/img/mt2.svg) repeat-x;
     background-size: 200%;
     animation: scroll-anim 48s linear infinite;
     z-index: -100;
@@ -143,7 +143,7 @@ footer{
     height: 12vw;
     position: fixed;
     bottom: 0;
-    background: url(https://dev.lehi.work/m1.svg) repeat-x;
+    background: url(https://lehi.me/img/m1.svg) repeat-x;
     background-size: 400%;
     animation: scroll-anim 38s linear infinite;
     z-index: -100;
