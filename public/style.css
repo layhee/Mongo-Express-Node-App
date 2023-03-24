@@ -53,8 +53,11 @@ hr{
     border-top: 2px dashed #8c8b8b;
 	border-bottom: 1px dashed #fff;
 }
+.brown{
+    color: #283618;
+}
 .nav-color{
-    --bs-nav-link-color: #FEFAE0;
+    --bs-nav-link-color: rgb(255, 180, 4);
     --bs-nav-link-hover-color:#d4d0b9; 
 }
 .logo-bg{
@@ -106,6 +109,9 @@ footer{
     width: 100vw;
     bottom: 0;
     z-index: -100;
+}
+.btn{
+    font-family: 'Fragment Mono', serif;
 }
 .welcome{
     font-size: 4rem;
@@ -231,6 +237,9 @@ footer{
     .container{
         flex-direction: column-reverse;
     }
+    section{
+        margin-bottom: 32px;
+    }
 }
 
 @media (max-width: 767.98px) {
@@ -247,6 +256,9 @@ footer{
     max-height: 60px;
     margin: 0 16px;
     }
+    section{
+        margin-bottom: 32px;
+    }
 }
 
 @media (max-width: 576px) {
@@ -255,5 +267,8 @@ footer{
     }
     header{
         justify-content: space-between;
+    }
+    section{
+        margin-bottom: 32px;
     }
 }
