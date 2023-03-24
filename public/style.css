@@ -259,6 +259,9 @@ footer{
     section{
         margin-bottom: 32px;
     }
+    .col-6{
+        width: 100%;
+    }
 }
 
 @media (max-width: 576px) {
