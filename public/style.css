@@ -159,6 +159,16 @@ footer{
         background-position: 100% 0;
     }
 }
+.form-head{
+    font-size: .8rem;
+    line-height: .6rem;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    font-family: 'Bitter', serif;
+    color: rgb(255, 255, 255);
+    font-weight: 800;
+    margin: 6px 0 0 8px;
+}
 .img-show{
     border-radius: 6px 6px;
     margin: 18px 8px;

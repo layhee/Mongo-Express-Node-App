@@ -13,30 +13,51 @@
         <section class="col-12 d-flex flex-wrap flex-column">
             <form action="/rigs/<%=rig._id%>?_method=PUT" method="POST" class="d-flex flex-row flex-wrap">
                 <div class="col col-6 px-2 py-2">
+                    <h4 class="form-head">name</h4>
                     <input type="text" class="form-control my-2" name="name" value="<%=rig.name%>" placeholder="Name">
+                    <h4 class="form-head">frame</h4>
                     <input type="text" class="form-control my-2" name="frame" value="<%=rig.frame%>" placeholder="Frame">
+                    <h4 class="form-head">Fork</h4>
                     <input type="text" class="form-control my-2" name="fork" value="<%=rig.fork%>" placeholder="Fork">
+                    <h4 class="form-head">rims</h4>
                     <input type="text" class="form-control my-2" name="rims" value="<%=rig.rims%>" placeholder="Rims">
+                    <h4 class="form-head">hubs</h4>
                     <input type="text" class="form-control my-2" name="hubs" value="<%=rig.hubs%>" placeholder="Hubs">
+                    <h4 class="form-head">tires</h4>
                     <input type="text" class="form-control my-2" name="tires" value="<%=rig.tires%>" placeholder="Tires">
+                    <h4 class="form-head">handlebars</h4>
                     <input type="text" class="form-control my-2" name="handlebars" value="<%=rig.handlebars%>" placeholder="Handlebars">
+                    <h4 class="form-head">headset</h4>
                     <input type="text" class="form-control my-2" name="headset" value="<%=rig.headset%>" placeholder="Headset">
+                    <h4 class="form-head">crankset</h4>
                     <input type="text" class="form-control my-2" name="crankset" value="<%=rig.crankset%>" placeholder="Crankset">
+                    <h4 class="form-head">pedals</h4>
                     <input type="text" class="form-control my-2" name="pedals" value="<%=rig.pedals%>" placeholder="Pedals">
                 </div>
                 <div class="col col-6 px-2 py-2">
+                    <h4 class="form-head">cassette</h4>
                     <input type="text" class="form-control my-2" name="cassette" value="<%=rig.cassette%>" placeholder="Cassette">
+                    <h4 class="form-head">derailleur</h4>
                     <input type="text" class="form-control my-2" name="derailleur" value="<%=rig.derailleur%>" placeholder="Derailleur">
+                    <h4 class="form-head">brakes</h4>
                     <input type="text" class="form-control my-2" name="brakes" value="<%=rig.brakes%>" placeholder="Brakes">
+                    <h4 class="form-head">shifters</h4>
                     <input type="text" class="form-control my-2" name="shifters" value="<%=rig.shifters%>" placeholder="Shifters">
+                    <h4 class="form-head">Saddle</h4>
                     <input type="text" class="form-control my-2" name="saddle" value="<%=rig.saddle%>" placeholder="Saddle">
+                    <h4 class="form-head">seatpost</h4>
                     <input type="text" class="form-control my-2" name="seatpost" value="<%=rig.seatpost%>" placeholder="Seatpost">
+                    <h4 class="form-head">stem</h4>
                     <input type="text" class="form-control my-2" name="stem" value="<%=rig.stem%>" placeholder="Stem">
+                    <h4 class="form-head">front bag</h4>
                     <input type="text" class="form-control my-2" name="frontbag" value="<%=rig.frontbag%>" placeholder="Front Bag">
+                    <h4 class="form-head">frame bag</h4>
                     <input type="text" class="form-control my-2" name="framebag" value="<%=rig.framebag%>" placeholder="Frame Bag">
+                    <h4 class="form-head">rear bag</h4>
                     <input type="text" class="form-control my-2" name="rearbag" value="<%=rig.rearbag%>" placeholder="Rear Bag">
                 </div>
                 <div class="col col-12 px-2 mb-4">
+                    <h4 class="form-head">image</h4>
                     <input type="text" class="form-control my-2" name="img" value="<%=rig.img%>" placeholder="Image URL">
                     <input type="submit" class="btn btn-warning btn-large shadow mx-2 px-5" value="Update Rig">
                 </div>

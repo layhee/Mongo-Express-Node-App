@@ -12,14 +12,21 @@
         <div class="rig-new d-flex flex-row col col-9 shadow justify-content-center">
             <form action="/rides/<%=rides._id%>?_method=PUT" method="POST" class="d-flex flex-row flex-wrap col col-12">
                 <div class="col col-12 px-2 py-2">
+                    <h4 class="form-head">name</h4>
                     <input type="text" class="form-control my-2" name="name" placeholder="Ride Name" value="<%=rides.name%>">
+                    <h4 class="form-head">start</h4>
                     <input type="text" class="form-control my-2" name="start" placeholder="Start" value="<%=rides.start%>">
+                    <h4 class="form-head">end</h4>
                     <input type="text" class="form-control my-2" name="end" placeholder="End" value="<%=rides.end%>">
+                    <h4 class="form-head">distance (in KM)</h4>
                     <input type="number" class="form-control my-2" name="distance" placeholder="Distance (in KM, please)" value="<%=rides.distance%>">
+                    <h4 class="form-head">terrain</h4>
                     <input type="text" class="form-control my-2" name="terrain" placeholder="Type of Terrain" value="<%=rides.terrain%>">
+                    <h4 class="form-head">description</h4>
                     <input type="textarea" class="form-control my-2" name="desc" placeholder="Brief Description of What You'll See" value="<%=rides.desc%>">
                 </div>
                 <div class="col col-12 px-2 mb-4">
+                    <h4 class="form-head">image</h4>
                     <input type="text" class="form-control my-2" name="img" value="<%=rides.img%>" placeholder="Image URL">
                     <input type="submit" class="btn btn-warning btn-large shadow mx-2 px-5" value="Update Ride">
                 </div>
