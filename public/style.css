@@ -5,6 +5,8 @@ light orange - #DDA15E
 dark orange - #BC6C25 */
 @import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Chivo+Mono:ital,wght@0,500;1,500&family=Fragment+Mono:ital@0;1&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Stint+Ultra+Expanded&display=swap');
+
 *, *::before, *::after{
     margin: 0;
     padding: 0;
@@ -20,7 +22,7 @@ body{
 header{
     display: flex;
     box-sizing: border-box;
-    font-family: 'Chivo Mono', serif;
+    font-family: 'Stint Ultra Expanded', serif;
     font-size: 1.6rem;
     color: #FEFAE0;
     background: #283618;
@@ -36,12 +38,11 @@ h1{
     text-shadow: 2px 2px 2px rgb(163 114 10 / 80%);
 }
 h2{
-    font-family: 'Bitter', serif;
-    font-style: italic;
+    font-family: 'Stint Ultra Expanded', serif;
     font-weight: 800;
     color: rgb(255, 180, 4);
     font-size: 2.2rem;
-    text-shadow: 2px 2px 2px rgba(163 114 10 / 80%);
+    /* text-shadow: 2px 2px 2px rgba(163 114 10 / 80%); */
 }
 a{
     text-decoration: none;
@@ -111,7 +112,7 @@ footer{
     z-index: -100;
 }
 .btn{
-    font-family: 'Fragment Mono', serif;
+    font-family: 'Stint Ultra Expanded', serif;
 }
 .welcome{
     font-size: 4rem;
@@ -195,7 +196,7 @@ footer{
     margin: 2px 0;
     padding: 2px 2px;
     color: #fff;
-    font-family: 'Fragment Mono', sans-serif;
+    font-family: 'Stint Ultra Expanded', sans-serif;
     font-size: 1.6rem;
 }
 .rig-title a{
