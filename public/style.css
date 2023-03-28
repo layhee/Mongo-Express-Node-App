@@ -35,7 +35,6 @@ h1{
     color: rgb(255, 180, 4);
     font-weight: 800;
     margin: 24px 0;
-    text-shadow: 2px 2px 2px rgb(163 114 10 / 80%);
 }
 h2{
     font-family: 'Stint Ultra Expanded', serif;
@@ -171,13 +170,13 @@ footer{
     margin: 6px 0 0 8px;
 }
 .img-show{
-    border-radius: 6px 6px;
-    margin: 18px 8px;
+    border-radius: 6px 6px 0 0;
+    border-bottom: solid 12px rgb(255, 180, 4);
 }
 .rnr-card{
-    width: 25%; 
+    /* width: 25%;  */
     max-width: 320px;
-    font-family: 'Chivo Mono', serif;
+    font-family: 'Fragment Mono', serif;
 }
 .rig-details{
     margin: 2px 0;
@@ -188,8 +187,12 @@ footer{
     z-index: 200;
     text-transform: uppercase;
 }
+.col-12{
+    width: 90%;
+}
 .rig-new{
     background-color: #86974e;
+    border-radius: 6px 6px;
 }
 .rig-title{
     color: #BC6C25;
@@ -220,6 +223,10 @@ footer{
 }
 .card{
     max-width: 360px;
+    border: none;
+}
+.card-img-top{
+    border-bottom: solid 12px rgb(255, 180, 4);
 }
 .show-fluid{
     width: 50%; 
