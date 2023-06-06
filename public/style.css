@@ -229,7 +229,7 @@ footer{
     border-bottom: solid 12px rgb(255, 180, 4);
 }
 .show-fluid{
-    width: 50%; 
+    /* width: 50%;  */
     max-width: 666px;
 }
 @media (max-width: 991.98px) {
